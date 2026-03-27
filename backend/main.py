@@ -30,7 +30,7 @@ F2 = os.path.join(DATA_DIR, "UD_GRAD_2020_2024.xlsx")
 F3 = os.path.join(DATA_DIR, "UD_Relationships.xlsx")
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
-GEMINI_MODEL   = "gemini-1.5-flash-latest"
+GEMINI_MODEL   = "gemini-2.5-flash"
 
 # ═════════════════════════════════════════════
 # DATA LOADING  (cached so xlsx only read once)
@@ -287,14 +287,17 @@ async def chat(req: ChatRequest):
         gemini_contents.append({"role": role, "parts": [{"text": m["content"]}]})
 
     url = (
-        f"https://generativelanguage.googleapis.com/v1/models/"
-        f"{GEMINI_MODEL}:generateContent?key={GEMINI_API_KEY}"
+        f"https://generativelanguage.googleapis.com/v1beta/models/"
+        f"{GEMINI_MODEL}:generateContent"
     )
 
     async with httpx.AsyncClient(timeout=30) as client:
         resp = await client.post(
             url,
-            headers={"content-type": "application/json"},
+            headers={
+                "content-type": "application/json",
+                "x-goog-api-key": GEMINI_API_KEY,
+            },
             json={
                 "contents": gemini_contents,
                 "generationConfig": {"maxOutputTokens": 1024},
