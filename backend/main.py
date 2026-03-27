@@ -29,8 +29,8 @@ F1 = os.path.join(DATA_DIR, "UD_2020_2024.xlsx")
 F2 = os.path.join(DATA_DIR, "UD_GRAD_2020_2024.xlsx")
 F3 = os.path.join(DATA_DIR, "UD_Relationships.xlsx")
 
-ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
-CLAUDE_MODEL      = "claude-sonnet-4-20250514"
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+GEMINI_MODEL   = "gemini-2.0-flash"
 
 # ═════════════════════════════════════════════
 # DATA LOADING  (cached so xlsx only read once)
@@ -276,22 +276,28 @@ class ChatRequest(BaseModel):
 
 @app.post("/api/chat")
 async def chat(req: ChatRequest):
-    if not ANTHROPIC_API_KEY:
-        raise HTTPException(status_code=500, detail="ANTHROPIC_API_KEY not set on server.")
+    if not GEMINI_API_KEY:
+        raise HTTPException(status_code=500, detail="GEMINI_API_KEY not set on server.")
+
+    # 把 messages 轉成 Gemini 格式，並在最前面注入 system prompt
+    gemini_contents = [{"role": "user", "parts": [{"text": SYSTEM_PROMPT}]},
+                       {"role": "model", "parts": [{"text": "Understood. I am ready to assist."}]}]
+    for m in req.messages:
+        role = "model" if m["role"] == "assistant" else "user"
+        gemini_contents.append({"role": role, "parts": [{"text": m["content"]}]})
+
+    url = (
+        f"https://generativelanguage.googleapis.com/v1beta/models/"
+        f"{GEMINI_MODEL}:generateContent?key={GEMINI_API_KEY}"
+    )
 
     async with httpx.AsyncClient(timeout=30) as client:
         resp = await client.post(
-            "https://api.anthropic.com/v1/messages",
-            headers={
-                "x-api-key": ANTHROPIC_API_KEY,
-                "anthropic-version": "2023-06-01",
-                "content-type": "application/json",
-            },
+            url,
+            headers={"content-type": "application/json"},
             json={
-                "model": CLAUDE_MODEL,
-                "max_tokens": 1024,
-                "system": SYSTEM_PROMPT,
-                "messages": req.messages,
+                "contents": gemini_contents,
+                "generationConfig": {"maxOutputTokens": 1024},
             },
         )
 
@@ -299,7 +305,7 @@ async def chat(req: ChatRequest):
         raise HTTPException(status_code=resp.status_code, detail=resp.text)
 
     data = resp.json()
-    text = next((b["text"] for b in data["content"] if b["type"] == "text"), "")
+    text = data["candidates"][0]["content"]["parts"][0]["text"]
     return {"reply": text}
 
 
