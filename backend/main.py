@@ -248,26 +248,85 @@ def get_years():
 # ENDPOINT — CLAUDE AI PROXY
 # ═════════════════════════════════════════════
 
-SYSTEM_PROMPT = """You are an expert analyst for the University of Delaware's Educator Preparation Program (EPP) dashboard.
-You have access to live data from three Excel sources:
-1. UD_2020_2024.xlsx — enrolled student data: gender distribution, race/ethnicity, GPA profiles (2020–2024).
-2. UD_GRAD_2020_2024.xlsx — graduate outcomes: Praxis pass rates, employment location, HNS placement, Year 1/Year 3 retention, graduate & supervisor perception scores.
-3. UD_Relationships.xlsx — dimension tables: programs, institutions, categories.
+BASE_SYSTEM_PROMPT = """You are an expert analyst for the University of Delaware's Educator Preparation Program (EPP) dashboard.
+You will be given LIVE data retrieved directly from the database. Always base your answers on this live data.
+Answer concisely with specific numbers. Mention which tab/chart is relevant when helpful.
+If asked something outside the dataset, say so."""
 
-Key facts:
-- 22 programs (Bachelors & Masters), all at University of Delaware
-- 2024 Praxis overall pass rate: 99.6% (231 graduates); 16/17 programs at 100%; Masters Secondary STEM 4+1 at 75% (n=4)
-- 2024 employment: 116 teaching in DE (50.4%), 72 not teaching (31.3%), 42 out of DE (18.3%)
-- 2024 HNS: 18 graduates (15.5%) placed at High-Need Schools
-- Year 1 retention: ranges 65.5%–85.2% across cohorts (2020–2024)
-- Year 3 retention: ranges 58.0%–70.0% (cohorts 2020–2022)
-- GPA ≥ 3.0: consistently 86–92% each year
-- Gender: ~85–90% female enrollment each year
-- Race 2024: ~88% White, ~5% Black, ~4% Asian/PI, ~2% Hispanic, <1% Am. Indian
-- Perception scored 1–5; supervisor scores more stable than graduate self-scores
-- Perception 5 dimensions: Instruction Design, Content Knowledge, Classroom Management, Instructional Practice, Professional Responsibility
 
-Answer concisely with specific numbers. Mention which tab/chart is relevant when helpful. If asked something outside the dataset, say so."""
+def fetch_live_data() -> dict:
+    """Retrieve live data from all endpoints to inject into the AI prompt (RAG)."""
+    d = load_all()
+
+    # Gender — aggregate across all years
+    gender_df = d["gender"].copy()
+    gender_agg = gender_df.groupby(["school_year", "gender"])["count"].sum().reset_index()
+    gender_pivot = gender_agg.pivot(index="school_year", columns="gender", values="count").fillna(0).reset_index()
+    gender_pivot.columns.name = None
+    gender_pivot["total"] = gender_pivot.get("F", 0) + gender_pivot.get("M", 0)
+
+    # Race — aggregate across all years
+    race_df = d["race"].copy()
+    race_agg = race_df.groupby("race_descp.x")["count"].sum().reset_index()
+    race_agg.columns = ["race", "count"]
+    race_total = race_agg["count"].sum()
+    race_agg["pct"] = (race_agg["count"] / race_total * 100).round(1)
+
+    # GPA
+    gpa_df = d["gpa"].copy()
+    gpa_agg = gpa_df.groupby("school_year")[["total", "above_3_count", "below_3_count"]].sum().reset_index()
+    gpa_agg["pct_above"] = (gpa_agg["above_3_count"] / gpa_agg["total"] * 100).round(1)
+
+    # Praxis pass rate by year
+    praxis_df = d["praxis_fail"].copy()
+    praxis_df["year"] = praxis_df["year"].astype(int)
+    praxis_agg = praxis_df.groupby("year")[["total_graduates", "graduates_with_pass"]].sum().reset_index()
+    praxis_agg["pass_rate"] = (praxis_agg["graduates_with_pass"] / praxis_agg["total_graduates"] * 100).round(1)
+
+    # Praxis by program (latest year only)
+    latest_year = int(praxis_df["year"].max())
+    praxis_prog = praxis_df[praxis_df["year"] == latest_year].groupby(
+        ["program_id", "program_name"])[["total_graduates", "graduates_with_pass"]].sum().reset_index()
+    praxis_prog["pass_rate"] = (praxis_prog["graduates_with_pass"] / praxis_prog["total_graduates"] * 100).round(1)
+
+    # Employment location
+    employ_df = d["employ"].copy()
+    employ_df["school_year"] = employ_df["school_year"].astype(int)
+    employ_agg = employ_df.groupby("work_location_2")["count"].sum().reset_index()
+    employ_agg.columns = ["location", "count"]
+    employ_total = employ_agg["count"].sum()
+    employ_agg["pct"] = (employ_agg["count"] / employ_total * 100).round(1)
+
+    # HNS placement
+    hns_df = d["hns"].copy()
+    hns_agg = hns_df.groupby("hns")["count"].sum().reset_index()
+    hns_total = hns_agg["count"].sum()
+    hns_agg["pct"] = (hns_agg["count"] / hns_total * 100).round(1)
+
+    # Retention
+    ret_df = d["retention"].copy()
+    ret_agg = ret_df.groupby(["graduate_cohort", "RetentionYear"])[["total", "Retained"]].sum().reset_index()
+    ret_agg["Retained_PCT"] = (ret_agg["Retained"] / ret_agg["total"] * 100).round(1)
+
+    # Graduate perception scores
+    dims = ["instrdesg", "contknow", "classmange", "instrprac", "profresp"]
+    grad_cols = [f"median_{dim}_row_average" for dim in dims]
+    grad_perc = d["grad_perc"].copy()
+    grad_perc["school_year"] = grad_perc["school_year"].astype(str)
+    grad_agg = grad_perc.groupby("school_year")[grad_cols].mean().round(3).reset_index()
+    grad_agg.columns = ["year", "instrDesg", "contKnow", "classMgt", "instrPrac", "profResp"]
+
+    return {
+        "gender_by_year":       json.loads(gender_pivot.to_json(orient="records")),
+        "race_distribution":    json.loads(race_agg.to_json(orient="records")),
+        "gpa_by_year":          json.loads(gpa_agg.to_json(orient="records")),
+        "praxis_pass_rate":     json.loads(praxis_agg.to_json(orient="records")),
+        "praxis_by_program":    json.loads(praxis_prog.to_json(orient="records")),
+        "employment_location":  json.loads(employ_agg.to_json(orient="records")),
+        "hns_placement":        json.loads(hns_agg.to_json(orient="records")),
+        "retention":            json.loads(ret_agg.to_json(orient="records")),
+        "graduate_perception":  json.loads(grad_agg.to_json(orient="records")),
+    }
 
 
 class ChatRequest(BaseModel):
@@ -279,9 +338,20 @@ async def chat(req: ChatRequest):
     if not GEMINI_API_KEY:
         raise HTTPException(status_code=500, detail="GEMINI_API_KEY not set on server.")
 
-    # 把 messages 轉成 Gemini 格式，並在最前面注入 system prompt
-    gemini_contents = [{"role": "user", "parts": [{"text": SYSTEM_PROMPT}]},
-                       {"role": "model", "parts": [{"text": "Understood. I am ready to assist."}]}]
+    # ── RAG: fetch live data and inject into system prompt ───────────────────
+    live_data = fetch_live_data()
+    rag_prompt = (
+        BASE_SYSTEM_PROMPT
+        + "\n\n--- LIVE DATA (retrieved from database) ---\n"
+        + json.dumps(live_data, indent=2)
+        + "\n--- END OF LIVE DATA ---"
+    )
+
+    # Build Gemini message format
+    gemini_contents = [
+        {"role": "user",  "parts": [{"text": rag_prompt}]},
+        {"role": "model", "parts": [{"text": "Understood. I have reviewed the live data and I am ready to assist."}]},
+    ]
     for m in req.messages:
         role = "model" if m["role"] == "assistant" else "user"
         gemini_contents.append({"role": role, "parts": [{"text": m["content"]}]})

@@ -165,7 +165,7 @@ function ChatPanel({ isOpen, onClose }) {
           <div style={{ width: 36, height: 36, borderRadius: "50%", background: "rgba(255,255,255,.2)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18 }}>🎓</div>
           <div>
             <div style={{ color: "#fff", fontFamily: "Fraunces,serif", fontWeight: 700, fontSize: 15 }}>EPP Data Assistant</div>
-            <div style={{ color: "rgba(255,255,255,.65)", fontSize: 11, fontFamily: "DM Sans,sans-serif" }}>Powered by Claude AI · Live Data</div>
+            <div style={{ color: "rgba(255,255,255,.65)", fontSize: 11, fontFamily: "DM Sans,sans-serif" }}>Powered by Gemini AI · Live Data</div>
           </div>
         </div>
         <button onClick={onClose} style={{ background: "rgba(255,255,255,.2)", border: "none", borderRadius: 8, color: "#fff", cursor: "pointer", width: 28, height: 28, fontSize: 18, lineHeight: 1 }}>×</button>
