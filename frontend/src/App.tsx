@@ -8,11 +8,98 @@ import {
 // ─── CONFIG ──────────────────────────────────────────────────────────────────
 const API = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
+// ─── TYPES ───────────────────────────────────────────────────────────────────
+interface Filters {
+  year: string;
+}
+
+interface SelectOption {
+  value: string;
+  label: string;
+}
+
+interface PraxisRow {
+  year: number;
+  pass_rate: number;
+  total_graduates: number;
+}
+
+interface EmploymentRow {
+  location: string;
+  count: number;
+  pct: number;
+}
+
+interface RetentionRow {
+  graduate_cohort: string;
+  RetentionYear: string;
+  Retained_PCT: number;
+}
+
+interface GpaRow {
+  school_year: string;
+  pct_above: number;
+  pct_below: number;
+}
+
+interface GenderRow {
+  school_year: string;
+  F: number;
+  M: number;
+}
+
+interface RaceRow {
+  race: string;
+  count: number;
+  pct: number;
+}
+
+interface PraxisByProgramRow {
+  program_name: string;
+  total_graduates: number;
+  pass_rate: number;
+}
+
+interface HnsRow {
+  hns: string;
+  count: number;
+}
+
+interface PerceptionRow {
+  school_year: string;
+  instrDesg: number;
+  contKnow: number;
+  classMgt: number;
+  instrPrac: number;
+  profResp: number;
+}
+
+interface ChatMessage {
+  role: "user" | "assistant";
+  content: string;
+}
+
+interface YearsResponse {
+  years: number[];
+}
+
+interface RetentionCombined {
+  cohort: string;
+  yr1: number;
+  yr3: number | null;
+}
+
+interface RadarRow {
+  dim: string;
+  Graduate: number;
+  Supervisor: number;
+}
+
 // ─── DATA FETCHING HOOK ───────────────────────────────────────────────────────
-function useAPI(path, params = {}) {
-  const [data, setData]     = useState(null);
+function useAPI<T>(path: string, params: Record<string, string | number> = {}) {
+  const [data, setData]       = useState<T | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError]   = useState(null);
+  const [error, setError]     = useState<string | null>(null);
 
   const query = Object.entries(params)
     .filter(([, v]) => v !== null && v !== undefined && v !== "")
@@ -27,8 +114,8 @@ function useAPI(path, params = {}) {
     setError(null);
     fetch(url)
       .then(r => { if (!r.ok) throw new Error(r.statusText); return r.json(); })
-      .then(d  => { if (!cancelled) { setData(d); setLoading(false); } })
-      .catch(e => { if (!cancelled) { setError(e.message); setLoading(false); } });
+      .then((d: T) => { if (!cancelled) { setData(d); setLoading(false); } })
+      .catch((e: Error) => { if (!cancelled) { setError(e.message); setLoading(false); } });
     return () => { cancelled = true; };
   }, [url]);
 
@@ -44,7 +131,8 @@ const C = {
   red:    "#dc2626",
   amber:  "#b45309",
   slate:  "#94a3b8",
-};
+} as const;
+
 const PIE_COLORS = [C.blue, C.purple, C.teal, C.green, C.amber];
 
 // ─── SMALL COMPONENTS ────────────────────────────────────────────────────────
@@ -59,13 +147,15 @@ const Spinner = () => (
   </div>
 );
 
-const Err = ({ msg }) => (
-  <div style={{ padding: 16, background: "#fef2f2", borderRadius: 8, color: C.red, fontSize: 13 }}>
-    ⚠ {msg}
-  </div>
-);
 
-const KPICard = ({ label, value, sub, color = C.blue, trend }) => (
+interface KPICardProps {
+  label: string;
+  value: string;
+  sub?: string;
+  color?: string;
+  trend?: number | null;
+}
+const KPICard = ({ label, value, sub, color = C.blue, trend }: KPICardProps) => (
   <div style={{
     background: "#fff", borderRadius: 16, padding: "20px 24px",
     boxShadow: "0 2px 12px rgba(0,0,0,0.06)", borderLeft: `4px solid ${color}`,
@@ -83,7 +173,13 @@ const KPICard = ({ label, value, sub, color = C.blue, trend }) => (
   </div>
 );
 
-const ChartCard = ({ title, children, tip, tipColor = C.blue }) => (
+interface ChartCardProps {
+  title: string;
+  children: React.ReactNode;
+  tip?: string;
+  tipColor?: string;
+}
+const ChartCard = ({ title, children, tip, tipColor = C.blue }: ChartCardProps) => (
   <div style={{ background: "#fff", borderRadius: 16, padding: "20px 24px", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}>
     <p style={{ margin: "0 0 14px", fontFamily: "DM Sans,sans-serif", fontSize: 12, fontWeight: 700, color: "#64748b", textTransform: "uppercase", letterSpacing: ".06em" }}>{title}</p>
     {children}
@@ -95,7 +191,13 @@ const ChartCard = ({ title, children, tip, tipColor = C.blue }) => (
   </div>
 );
 
-const Select = ({ value, onChange, options, label }) => (
+interface SelectProps {
+  value: string;
+  onChange: (v: string) => void;
+  options: SelectOption[];
+  label: string;
+}
+const Select = ({ value, onChange, options, label }: SelectProps) => (
   <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
     <span style={{ fontSize: 12, color: "#64748b", fontFamily: "DM Sans,sans-serif", whiteSpace: "nowrap" }}>{label}</span>
     <select value={value} onChange={e => onChange(e.target.value)} style={{
@@ -116,21 +218,26 @@ const QUICK = [
   "How many graduates are teaching in Delaware in 2024?",
 ];
 
-function ChatPanel({ isOpen, onClose }) {
-  const [messages, setMessages] = useState([{
+interface ChatPanelProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+function ChatPanel({ isOpen, onClose }: ChatPanelProps) {
+  const [messages, setMessages] = useState<ChatMessage[]>([{
     role: "assistant",
     content: "Hi! I'm your EPP data analyst. Ask me anything about UD's educator preparation data — Praxis rates, retention trends, employment, diversity, or perception scores.",
   }]);
-  const [input, setInput]   = useState("");
+  const [input, setInput]     = useState("");
   const [loading, setLoading] = useState(false);
-  const endRef = useRef(null);
+  const endRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth" }); }, [messages]);
 
-  const send = useCallback(async (text) => {
+  const send = useCallback(async (text?: string) => {
     const content = text || input.trim();
     if (!content || loading) return;
-    const newMessages = [...messages, { role: "user", content }];
+    const newMessages: ChatMessage[] = [...messages, { role: "user", content }];
     setMessages(newMessages);
     setInput("");
     setLoading(true);
@@ -142,10 +249,11 @@ function ChatPanel({ isOpen, onClose }) {
         body: JSON.stringify({ messages: newMessages }),
       });
       if (!res.ok) throw new Error(await res.text());
-      const data = await res.json();
+      const data = await res.json() as { reply: string };
       setMessages(prev => [...prev, { role: "assistant", content: data.reply }]);
     } catch (e) {
-      setMessages(prev => [...prev, { role: "assistant", content: `Error: ${e.message}` }]);
+      const msg = e instanceof Error ? e.message : "Unknown error";
+      setMessages(prev => [...prev, { role: "assistant", content: `Error: ${msg}` }]);
     }
     setLoading(false);
   }, [input, loading, messages]);
@@ -228,7 +336,14 @@ function ChatPanel({ isOpen, onClose }) {
 }
 
 // ─── TABS ─────────────────────────────────────────────────────────────────────
-const TABS = [
+type TabId = "overview" | "students" | "graduates" | "outcomes" | "perception";
+
+interface Tab {
+  id: TabId;
+  label: string;
+}
+
+const TABS: Tab[] = [
   { id: "overview",   label: "Overview"        },
   { id: "students",   label: "Student Profile" },
   { id: "graduates",  label: "Graduates"       },
@@ -237,23 +352,20 @@ const TABS = [
 ];
 
 // ── Overview ──────────────────────────────────────────────────────────────────
-function OverviewTab({ filters }) {
-  const { data: praxisData, loading: lP } = useAPI("/api/graduates/praxis", { year: filters.year });
-  const { data: empData,    loading: lE } = useAPI("/api/graduates/employment", { year: filters.year });
-  const { data: retData,    loading: lR } = useAPI("/api/graduates/retention");
-  const { data: gpaData,    loading: lG } = useAPI("/api/students/gpa");
+function OverviewTab({ filters }: { filters: Filters }) {
+  const { data: praxisData, loading: lP } = useAPI<PraxisRow[]>("/api/graduates/praxis", { year: filters.year });
+  const { data: empData,    loading: lE } = useAPI<EmploymentRow[]>("/api/graduates/employment", { year: filters.year });
+  const { data: retData,    loading: lR } = useAPI<RetentionRow[]>("/api/graduates/retention");
+  const { data: gpaData,    loading: lG } = useAPI<GpaRow[]>("/api/students/gpa");
+  const { data: praxisAll }               = useAPI<PraxisRow[]>("/api/graduates/praxis");
 
-  const praxisAll = useAPI("/api/graduates/praxis").data;
-
-  const latest = praxisData?.[praxisData.length - 1];
-  const empTotal = empData?.reduce((s, d) => s + d.count, 0) || 0;
-  const deTeach  = empData?.find(d => d.location === "DE")?.count || 0;
-
-  const retYr1 = retData?.filter(d => d.RetentionYear === "Beyond Year 1") || [];
+  const latest    = praxisData?.[praxisData.length - 1];
+  const empTotal  = empData?.reduce((s, d) => s + d.count, 0) ?? 0;
+  const deTeach   = empData?.find(d => d.location === "DE")?.count ?? 0;
+  const retYr1    = retData?.filter(d => d.RetentionYear === "Beyond Year 1") ?? [];
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-      {/* KPIs */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 16 }}>
         <KPICard label="Programs Offered" value="22" sub="Bachelors & Masters" color={C.blue} />
         <KPICard label="Praxis Pass Rate" value={latest ? `${latest.pass_rate}%` : "—"} sub={latest ? `${latest.total_graduates} graduates tested` : ""} color={C.green} />
@@ -269,7 +381,7 @@ function OverviewTab({ filters }) {
                 <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
                 <XAxis dataKey="year" tick={{ fontSize: 12 }} />
                 <YAxis domain={[60, 101]} unit="%" tick={{ fontSize: 12 }} />
-                <Tooltip formatter={v => [`${v}%`, "Pass Rate"]} />
+                <Tooltip formatter={(v) => [`${v}%`, "Pass Rate"]} />
                 <Line type="monotone" dataKey="pass_rate" stroke={C.blue} strokeWidth={3} dot={{ r: 5 }} />
               </LineChart>
             </ResponsiveContainer>
@@ -280,8 +392,8 @@ function OverviewTab({ filters }) {
           {lE ? <Spinner /> : (
             <ResponsiveContainer width="100%" height={210}>
               <PieChart>
-                <Pie data={empData} cx="50%" cy="50%" outerRadius={80} dataKey="count"
-                  label={({ location, pct }) => `${location}: ${pct}%`}>
+                <Pie data={empData ?? []} cx="50%" cy="50%" outerRadius={80} dataKey="count"
+                  label={({ location, pct }: EmploymentRow) => `${location}: ${pct}%`}>
                   {empData?.map((_, i) => <Cell key={i} fill={PIE_COLORS[i]} />)}
                 </Pie>
                 <Tooltip />
@@ -297,7 +409,7 @@ function OverviewTab({ filters }) {
                 <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
                 <XAxis dataKey="graduate_cohort" tick={{ fontSize: 12 }} />
                 <YAxis domain={[0, 100]} unit="%" tick={{ fontSize: 12 }} />
-                <Tooltip formatter={v => [`${v}%`, "Retained YR1"]} />
+                <Tooltip formatter={(v) => [`${v}%`, "Retained YR1"]} />
                 <Bar dataKey="Retained_PCT" fill={C.blue} radius={[6, 6, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
@@ -307,11 +419,11 @@ function OverviewTab({ filters }) {
         <ChartCard title="GPA ≥ 3.0 Over Time" tip="Consistently 86–92%; 2022 peaked at 92.1%.">
           {lG ? <Spinner /> : (
             <ResponsiveContainer width="100%" height={210}>
-              <LineChart data={gpaData}>
+              <LineChart data={gpaData ?? []}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
                 <XAxis dataKey="school_year" tick={{ fontSize: 12 }} />
                 <YAxis domain={[80, 100]} unit="%" tick={{ fontSize: 12 }} />
-                <Tooltip formatter={v => [`${v}%`, "Above 3.0"]} />
+                <Tooltip formatter={(v) => [`${v}%`, "Above 3.0"]} />
                 <Line type="monotone" dataKey="pct_above" stroke={C.green} strokeWidth={3} dot={{ r: 5 }} />
               </LineChart>
             </ResponsiveContainer>
@@ -323,10 +435,10 @@ function OverviewTab({ filters }) {
 }
 
 // ── Students ──────────────────────────────────────────────────────────────────
-function StudentsTab({ filters }) {
-  const { data: genderData, loading: lG } = useAPI("/api/students/gender", { year: filters.year });
-  const { data: raceData,   loading: lR } = useAPI("/api/students/race",   { year: filters.year });
-  const { data: gpaData,    loading: lGPA } = useAPI("/api/students/gpa",  { year: filters.year });
+function StudentsTab({ filters }: { filters: Filters }) {
+  const { data: genderData, loading: lG }   = useAPI<GenderRow[]>("/api/students/gender", { year: filters.year });
+  const { data: raceData,   loading: lR }   = useAPI<RaceRow[]>("/api/students/race",     { year: filters.year });
+  const { data: gpaData,    loading: lGPA } = useAPI<GpaRow[]>("/api/students/gpa",       { year: filters.year });
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
@@ -334,12 +446,12 @@ function StudentsTab({ filters }) {
         <ChartCard title="Enrollment by Gender" tip="Education remains ~87% female; male enrollment peaked in 2021.">
           {lG ? <Spinner /> : (
             <ResponsiveContainer width="100%" height={230}>
-              <BarChart data={genderData}>
+              <BarChart data={genderData ?? []}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
                 <XAxis dataKey="school_year" tick={{ fontSize: 12 }} />
                 <YAxis tick={{ fontSize: 12 }} />
                 <Tooltip /><Legend />
-                <Bar dataKey="F" name="Female" fill={C.blue} radius={[4, 4, 0, 0]} />
+                <Bar dataKey="F" name="Female" fill={C.blue}   radius={[4, 4, 0, 0]} />
                 <Bar dataKey="M" name="Male"   fill={C.purple} radius={[4, 4, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
@@ -350,8 +462,8 @@ function StudentsTab({ filters }) {
           {lR ? <Spinner /> : (
             <ResponsiveContainer width="100%" height={230}>
               <PieChart>
-                <Pie data={raceData} cx="50%" cy="50%" outerRadius={85} dataKey="count"
-                  label={({ race, pct }) => `${race}: ${pct}%`}>
+                <Pie data={raceData ?? []} cx="50%" cy="50%" outerRadius={85} dataKey="count"
+                  label={({ race, pct }: RaceRow) => `${race}: ${pct}%`}>
                   {raceData?.map((_, i) => <Cell key={i} fill={PIE_COLORS[i]} />)}
                 </Pie>
                 <Tooltip />
@@ -364,11 +476,11 @@ function StudentsTab({ filters }) {
       <ChartCard title="GPA Distribution by Year" tip="GPA ≥ 3.0 has stayed consistently above 86% since 2020.">
         {lGPA ? <Spinner /> : (
           <ResponsiveContainer width="100%" height={220}>
-            <BarChart data={gpaData}>
+            <BarChart data={gpaData ?? []}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
               <XAxis dataKey="school_year" tick={{ fontSize: 12 }} />
               <YAxis unit="%" tick={{ fontSize: 12 }} />
-              <Tooltip formatter={v => [`${v}%`]} /><Legend />
+              <Tooltip formatter={(v) => [`${v}%`]} /><Legend />
               <Bar dataKey="pct_above" name="GPA ≥ 3.0" fill={C.green}  radius={[4, 4, 0, 0]} />
               <Bar dataKey="pct_below" name="GPA < 3.0" fill="#fca5a5" radius={[4, 4, 0, 0]} />
             </BarChart>
@@ -380,9 +492,9 @@ function StudentsTab({ filters }) {
 }
 
 // ── Graduates ─────────────────────────────────────────────────────────────────
-function GraduatesTab({ filters }) {
-  const { data: praxisAll, loading: lP } = useAPI("/api/graduates/praxis");
-  const { data: byProg,    loading: lB } = useAPI("/api/graduates/praxis/by-program", { year: filters.year || 2024 });
+function GraduatesTab({ filters }: { filters: Filters }) {
+  const { data: praxisAll, loading: lP } = useAPI<PraxisRow[]>("/api/graduates/praxis");
+  const { data: byProg,    loading: lB } = useAPI<PraxisByProgramRow[]>("/api/graduates/praxis/by-program", { year: filters.year || 2024 });
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
@@ -393,7 +505,7 @@ function GraduatesTab({ filters }) {
               <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
               <XAxis dataKey="year" tick={{ fontSize: 12 }} />
               <YAxis domain={[0, 105]} unit="%" tick={{ fontSize: 12 }} />
-              <Tooltip formatter={v => [`${v}%`, "Pass Rate"]} />
+              <Tooltip formatter={(v) => [`${v}%`, "Pass Rate"]} />
               <Bar dataKey="pass_rate" radius={[6, 6, 0, 0]}>
                 {praxisAll?.filter(d => d.pass_rate > 0).map((e, i) => (
                   <Cell key={i} fill={e.pass_rate >= 95 ? C.green : e.pass_rate >= 80 ? C.blue : C.amber} />
@@ -442,17 +554,17 @@ function GraduatesTab({ filters }) {
 }
 
 // ── Outcomes ──────────────────────────────────────────────────────────────────
-function OutcomesTab({ filters }) {
-  const { data: empData, loading: lE } = useAPI("/api/graduates/employment", { year: filters.year });
-  const { data: hnsData, loading: lH } = useAPI("/api/graduates/hns",        { year: filters.year });
-  const { data: retData, loading: lR } = useAPI("/api/graduates/retention");
+function OutcomesTab({ filters }: { filters: Filters }) {
+  const { data: empData, loading: lE } = useAPI<EmploymentRow[]>("/api/graduates/employment", { year: filters.year });
+  const { data: hnsData, loading: lH } = useAPI<HnsRow[]>("/api/graduates/hns",              { year: filters.year });
+  const { data: retData, loading: lR } = useAPI<RetentionRow[]>("/api/graduates/retention");
 
-  const yr1 = retData?.filter(d => d.RetentionYear === "Beyond Year 1") || [];
-  const yr3 = retData?.filter(d => d.RetentionYear === "Beyond Year 3") || [];
+  const yr1 = retData?.filter(d => d.RetentionYear === "Beyond Year 1") ?? [];
+  const yr3 = retData?.filter(d => d.RetentionYear === "Beyond Year 3") ?? [];
 
-  const combined = yr1.map(r1 => {
-    const r3 = yr3.find(r => r.graduate_cohort === r1.graduate_cohort);
-    return { cohort: r1.graduate_cohort, yr1: r1.Retained_PCT, yr3: r3?.Retained_PCT ?? null };
+  const combined: RetentionCombined[] = yr1.map(r1 => {
+    const r3row = yr3.find(r => r.graduate_cohort === r1.graduate_cohort);
+    return { cohort: r1.graduate_cohort, yr1: r1.Retained_PCT, yr3: r3row?.Retained_PCT ?? null };
   });
 
   return (
@@ -462,8 +574,8 @@ function OutcomesTab({ filters }) {
           {lE ? <Spinner /> : (
             <ResponsiveContainer width="100%" height={230}>
               <PieChart>
-                <Pie data={empData} cx="50%" cy="50%" outerRadius={85} dataKey="count"
-                  label={({ location, pct }) => `${location}: ${pct}%`}>
+                <Pie data={empData ?? []} cx="50%" cy="50%" outerRadius={85} dataKey="count"
+                  label={({ location, pct }: EmploymentRow) => `${location}: ${pct}%`}>
                   {empData?.map((_, i) => <Cell key={i} fill={PIE_COLORS[i]} />)}
                 </Pie>
                 <Tooltip />
@@ -476,8 +588,8 @@ function OutcomesTab({ filters }) {
           {lH ? <Spinner /> : (
             <ResponsiveContainer width="100%" height={230}>
               <PieChart>
-                <Pie data={hnsData} cx="50%" cy="50%" outerRadius={85} dataKey="count"
-                  label={({ hns, count }) => `${hns}: ${count}`}>
+                <Pie data={hnsData ?? []} cx="50%" cy="50%" outerRadius={85} dataKey="count"
+                  label={({ hns, count }: HnsRow) => `${hns}: ${count}`}>
                   {hnsData?.map((_, i) => <Cell key={i} fill={[C.red, C.blue][i]} />)}
                 </Pie>
                 <Tooltip />
@@ -494,7 +606,7 @@ function OutcomesTab({ filters }) {
               <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
               <XAxis dataKey="cohort" tick={{ fontSize: 12 }} />
               <YAxis domain={[40, 100]} unit="%" tick={{ fontSize: 12 }} />
-              <Tooltip formatter={v => v ? [`${v}%`] : ["No data"]} />
+              <Tooltip formatter={(v) => v ? [`${v}%`] : ["No data"]} />
               <Legend />
               <Line type="monotone" dataKey="yr1" name="Beyond Year 1" stroke={C.blue}   strokeWidth={3} dot={{ r: 5 }} />
               <Line type="monotone" dataKey="yr3" name="Beyond Year 3" stroke={C.purple} strokeWidth={3} dot={{ r: 5 }} connectNulls={false} />
@@ -507,23 +619,28 @@ function OutcomesTab({ filters }) {
 }
 
 // ── Perception ────────────────────────────────────────────────────────────────
-const DIMS = [
-  { key: "instrDesg",  label: "Instruction Design"     },
-  { key: "contKnow",  label: "Content Knowledge"       },
-  { key: "classMgt",  label: "Classroom Mgmt"          },
-  { key: "instrPrac", label: "Instructional Practice"  },
-  { key: "profResp",  label: "Prof. Responsibility"    },
+interface Dim {
+  key: keyof Omit<PerceptionRow, "school_year">;
+  label: string;
+}
+
+const DIMS: Dim[] = [
+  { key: "instrDesg",  label: "Instruction Design"    },
+  { key: "contKnow",  label: "Content Knowledge"      },
+  { key: "classMgt",  label: "Classroom Mgmt"         },
+  { key: "instrPrac", label: "Instructional Practice" },
+  { key: "profResp",  label: "Prof. Responsibility"   },
 ];
 
-function PerceptionTab({ filters }) {
-  const { data: gradData, loading: lG } = useAPI("/api/graduates/perception", { rater: "graduate", year: filters.year });
-  const { data: supData,  loading: lS } = useAPI("/api/graduates/perception", { rater: "supervisor", year: filters.year });
+function PerceptionTab({ filters }: { filters: Filters }) {
+  const { data: gradData, loading: lG } = useAPI<PerceptionRow[]>("/api/graduates/perception", { rater: "graduate",   year: filters.year });
+  const { data: supData,  loading: lS } = useAPI<PerceptionRow[]>("/api/graduates/perception", { rater: "supervisor", year: filters.year });
 
-  // Build radar from latest year
   const gradLatest = gradData?.[gradData.length - 1];
   const supLatest  = supData?.[supData.length - 1];
-  const radar = DIMS.map(d => ({
-    dim: d.label,
+
+  const radar: RadarRow[] = DIMS.map(d => ({
+    dim:        d.label,
     Graduate:   gradLatest?.[d.key] ?? 0,
     Supervisor: supLatest?.[d.key]  ?? 0,
   }));
@@ -540,7 +657,7 @@ function PerceptionTab({ filters }) {
                 <Radar name="Graduate"   dataKey="Graduate"   stroke={C.blue}   fill={C.blue}   fillOpacity={0.2} />
                 <Radar name="Supervisor" dataKey="Supervisor" stroke={C.purple} fill={C.purple} fillOpacity={0.2} />
                 <Legend />
-                <Tooltip formatter={v => [v?.toFixed(2)]} />
+                <Tooltip formatter={(v: number) => [v?.toFixed(2)]} />
               </RadarChart>
             </ResponsiveContainer>
           )}
@@ -556,7 +673,7 @@ function PerceptionTab({ filters }) {
                 <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
                 <XAxis dataKey="year" tick={{ fontSize: 12 }} />
                 <YAxis domain={[2, 4]} tick={{ fontSize: 12 }} />
-                <Tooltip formatter={v => [`${v}`, "Avg Score"]} />
+                <Tooltip formatter={(v) => [`${v}`, "Avg Score"]} />
                 <Line type="monotone" dataKey="avg" stroke={C.blue} strokeWidth={3} dot={{ r: 5 }} />
               </LineChart>
             </ResponsiveContainer>
@@ -567,11 +684,11 @@ function PerceptionTab({ filters }) {
       <ChartCard title="All 5 Dimensions — Graduate Perception Trend">
         {lG ? <Spinner /> : (
           <ResponsiveContainer width="100%" height={240}>
-            <LineChart data={gradData}>
+            <LineChart data={gradData ?? []}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
               <XAxis dataKey="school_year" tick={{ fontSize: 12 }} />
               <YAxis domain={[2, 4.5]} tick={{ fontSize: 12 }} />
-              <Tooltip formatter={v => [v?.toFixed(2)]} /><Legend />
+              <Tooltip formatter={(v: number) => [v?.toFixed(2)]} /><Legend />
               {DIMS.map((d, i) => (
                 <Line key={d.key} type="monotone" dataKey={d.key} name={d.label}
                   stroke={Object.values(C)[i]} strokeWidth={2} dot={{ r: 3 }} />
@@ -586,19 +703,20 @@ function PerceptionTab({ filters }) {
 
 // ─── MAIN APP ─────────────────────────────────────────────────────────────────
 export default function App() {
-  const [activeTab, setChatOpen_tab] = useState("overview");
-  const [chatOpen,  setChatOpen]     = useState(false);
-  const [yearFilter, setYearFilter]  = useState("");
+  const [activeTab,  setActiveTab]  = useState<TabId>("overview");
+  const [chatOpen,   setChatOpen]   = useState(false);
+  const [yearFilter, setYearFilter] = useState("");
 
-  const { data: yearsData } = useAPI("/api/years");
-  const { data: progsData } = useAPI("/api/programs");
+  const { data: yearsData } = useAPI<YearsResponse>("/api/years");
 
-  const yearOptions = [{ value: "", label: "All Years" },
-    ...(yearsData?.years || []).map(y => ({ value: y, label: String(y) }))];
+  const yearOptions: SelectOption[] = [
+    { value: "", label: "All Years" },
+    ...(yearsData?.years ?? []).map(y => ({ value: String(y), label: String(y) })),
+  ];
 
-  const filters = { year: yearFilter };
+  const filters: Filters = { year: yearFilter };
 
-  const panels = {
+  const panels: Record<TabId, React.ReactNode> = {
     overview:   <OverviewTab   filters={filters} />,
     students:   <StudentsTab   filters={filters} />,
     graduates:  <GraduatesTab  filters={filters} />,
@@ -635,7 +753,7 @@ export default function App() {
         <div style={{ background: "#fff", borderBottom: "1px solid #e2e8f0", padding: "0 32px" }}>
           <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex" }}>
             {TABS.map(tab => (
-              <button key={tab.id} onClick={() => setChatOpen_tab(tab.id)} style={{
+              <button key={tab.id} onClick={() => setActiveTab(tab.id)} style={{
                 padding: "16px 20px", border: "none", background: "transparent", cursor: "pointer",
                 fontFamily: "DM Sans,sans-serif", fontSize: 14,
                 fontWeight: activeTab === tab.id ? 700 : 500,
