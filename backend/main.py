@@ -300,13 +300,13 @@ def build_graph():
     # Add nodes (each node = one agent)
     workflow.add_node("router", router_agent)
     workflow.add_node("data_retrieval", data_agent)
-    workflow.add_node("answer", answer_agent)
+    workflow.add_node("answer_generator", answer_agent)
 
     # Define the flow
     workflow.set_entry_point("router")
     workflow.add_edge("router", "data_retrieval")
-    workflow.add_edge("data_retrieval", "answer")
-    workflow.add_edge("answer", END)
+    workflow.add_edge("data_retrieval", "answer_generator")
+    workflow.add_edge("answer_generator", END)
 
     return workflow.compile()
 
