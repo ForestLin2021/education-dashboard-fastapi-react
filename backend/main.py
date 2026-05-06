@@ -38,7 +38,7 @@ F2 = os.path.join(DATA_DIR, "UD_GRAD_2020_2024.xlsx")
 F3 = os.path.join(DATA_DIR, "UD_Relationships.xlsx")
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
-GEMINI_MODEL   = "gemini-1.5-flash"
+GEMINI_MODEL   = "gemini-2.5-flash"
 
 # ═════════════════════════════════════════════
 # DATA LOADING (unchanged)
