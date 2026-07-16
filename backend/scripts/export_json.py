@@ -29,6 +29,7 @@ REPO_ROOT = os.path.dirname(BACKEND_DIR)
 DATA_DIR = os.path.join(BACKEND_DIR, "data")
 F1 = os.path.join(DATA_DIR, "UD_2020_2024.xlsx")
 F2 = os.path.join(DATA_DIR, "UD_GRAD_2020_2024.xlsx")
+F3 = os.path.join(DATA_DIR, "UD_Relationships.xlsx")
 
 OUT_DIRS = [
     os.path.join(BACKEND_DIR, "data_summary"),
@@ -50,27 +51,22 @@ def write_json(name: str, obj) -> None:
 
 
 def export_gender(gender: pd.DataFrame) -> None:
-    agg = gender.groupby(["school_year", "gender"])["count"].sum().reset_index()
-    pivot = agg.pivot(index="school_year", columns="gender", values="count").fillna(0).reset_index()
-    pivot.columns.name = None
-    pivot["total"] = pivot.get("F", 0) + pivot.get("M", 0)
-    write_json("gender", to_records(pivot.sort_values("school_year")))
+    # Kept un-aggregated across (school_year, program_id) so the frontend can
+    # filter to a single year and/or program (or "All") before pivoting,
+    # same pattern as race/employment/hns below.
+    agg = gender.groupby(["school_year", "program_id", "program_name", "gender"])["count"].sum().reset_index()
+    write_json("gender", to_records(agg.sort_values(["school_year", "program_id", "gender"])))
 
 
 def export_race(race: pd.DataFrame) -> None:
-    # Kept un-aggregated across years (school_year + race) so the frontend can
-    # filter to a single year (or "All Years") before summing, exactly like
-    # the old /api/students/race?year=... endpoint did server-side.
-    agg = race.groupby(["school_year", "race_descp.x"])["count"].sum().reset_index()
-    agg.columns = ["school_year", "race", "count"]
-    write_json("race", to_records(agg.sort_values(["school_year", "race"])))
+    agg = race.groupby(["school_year", "program_id", "program_name", "race_descp.x"])["count"].sum().reset_index()
+    agg.columns = ["school_year", "program_id", "program_name", "race", "count"]
+    write_json("race", to_records(agg.sort_values(["school_year", "program_id", "race"])))
 
 
 def export_gpa(gpa: pd.DataFrame) -> None:
-    agg = gpa.groupby("school_year")[["total", "above_3_count", "below_3_count"]].sum().reset_index()
-    agg["pct_above"] = (agg["above_3_count"] / agg["total"] * 100).round(1)
-    agg["pct_below"] = (agg["below_3_count"] / agg["total"] * 100).round(1)
-    write_json("gpa", to_records(agg.sort_values("school_year")))
+    agg = gpa.groupby(["school_year", "program_id", "program_name"])[["total", "above_3_count", "below_3_count"]].sum().reset_index()
+    write_json("gpa", to_records(agg.sort_values(["school_year", "program_id"])))
 
 
 def export_praxis(praxis_fail: pd.DataFrame) -> None:
@@ -92,20 +88,22 @@ def export_praxis_by_program(praxis_fail: pd.DataFrame) -> None:
 def export_employment(employ: pd.DataFrame) -> None:
     df = employ.copy()
     df["school_year"] = df["school_year"].astype(int)
-    agg = df.groupby(["school_year", "work_location_2"])["count"].sum().reset_index()
-    agg.columns = ["school_year", "location", "count"]
-    write_json("employment", to_records(agg.sort_values(["school_year", "location"])))
+    agg = df.groupby(["school_year", "program_id", "program_name", "work_location_2"])["count"].sum().reset_index()
+    agg.columns = ["school_year", "program_id", "program_name", "location", "count"]
+    write_json("employment", to_records(agg.sort_values(["school_year", "program_id", "location"])))
 
 
 def export_hns(hns: pd.DataFrame) -> None:
     df = hns.copy()
     df["school_year"] = df["school_year"].astype(int)
-    agg = df.groupby(["school_year", "hns"])["count"].sum().reset_index()
-    write_json("hns", to_records(agg.sort_values(["school_year", "hns"])))
+    agg = df.groupby(["school_year", "program_id", "program_name", "hns"])["count"].sum().reset_index()
+    write_json("hns", to_records(agg.sort_values(["school_year", "program_id", "hns"])))
 
 
 def export_retention(retention: pd.DataFrame) -> None:
-    agg = retention.groupby(["graduate_cohort", "RetentionYear"])[["total", "Retained", "Not_Retained"]].sum().reset_index()
+    # Not year-filtered (frontend never has, matches the old unfiltered
+    # /api/graduates/retention endpoint) but now filterable by program.
+    agg = retention.groupby(["graduate_cohort", "RetentionYear", "program_id", "program_name"])[["total", "Retained", "Not_Retained"]].sum().reset_index()
     agg["Retained_PCT"] = (agg["Retained"] / agg["total"] * 100).round(1)
     write_json("retention", to_records(agg))
 
@@ -139,16 +137,92 @@ def export_years(gender: pd.DataFrame) -> None:
     write_json("years", {"years": years})
 
 
+def export_programs(programs: pd.DataFrame) -> None:
+    rows = programs[["ProgramID", "Programs"]].drop_duplicates().sort_values("Programs")
+    write_json("programs", [
+        {"value": str(int(r.ProgramID)), "label": r.Programs} for r in rows.itertuples()
+    ])
+
+
+def export_gpa_target(gpa_target: pd.DataFrame) -> None:
+    # Single-row lookup table: the compliance ceiling for "% admitted with
+    # GPA below 3.0" (e.g. min 0 / max 10 / target 10 -> compliant at <=10%).
+    df = gpa_target.rename(columns=lambda c: c.strip())
+    row = df.iloc[0]
+    write_json("gpa_target", {
+        "metric": row["GPA"],
+        "min": float(row["Min"]),
+        "max": float(row["Max"]),
+        "target": float(row["Target"]),
+    })
+
+
+def export_praxis_with_tests(praxis: pd.DataFrame) -> None:
+    df = praxis.copy()
+    df["year"] = df["year"].astype(int)
+    agg = df.groupby(["year", "program_id", "program_name"])[["total_graduates", "with_tests", "without_tests"]].sum().reset_index()
+    write_json("praxis_with_tests", to_records(agg.sort_values(["year", "program_id"])))
+
+
+def export_praxis_frequency(freq: pd.DataFrame) -> None:
+    df = freq.copy()
+    df["school_year"] = df["school_year"].astype(int)
+    agg = (
+        df.groupby(["school_year", "program_id", "program_name", "num_tests_taken"])["count"]
+        .sum()
+        .reset_index()
+        .sort_values(["school_year", "program_id", "num_tests_taken"])
+    )
+    # cumulative % of takers by attempt number, computed within each
+    # (year, program) group — mirrors the PDF's bar+cumulative-line chart.
+    group_totals = agg.groupby(["school_year", "program_id"])["count"].transform("sum")
+    agg["cum_pct"] = (agg.groupby(["school_year", "program_id"])["count"].cumsum() / group_totals * 100).round(1)
+    write_json("praxis_frequency", to_records(agg))
+
+
+def export_praxis_difficulty(difficulty: pd.DataFrame) -> None:
+    # Collapses the sheet's (school_year, program, test_year, course) grain
+    # down to (school_year, program, course) — matching what the PDF shows —
+    # by summing takers/attempts across retake test_years, then recomputing
+    # avg_attempts_per_taker and challenge_index from the summed totals.
+    # challenge_index = avg_attempts_per_taker^2 in every row of the source
+    # sheet (verified), so re-deriving it this way after aggregation stays
+    # consistent with the source rather than trying to average a squared value.
+    df = difficulty.copy()
+    agg = df.groupby(["school_year", "program_id", "program_name", "course_title"])[
+        ["unique_takers", "total_attempts", "takers_passed", "takers_no_pass"]
+    ].sum().reset_index()
+    agg["avg_attempts_per_taker"] = (agg["total_attempts"] / agg["unique_takers"]).round(2)
+    agg["pct_takers_passed"] = (agg["takers_passed"] / agg["unique_takers"] * 100).round(1)
+    agg["challenge_index"] = (agg["avg_attempts_per_taker"] ** 2).round(2)
+    write_json("praxis_difficulty", to_records(agg.sort_values(["school_year", "program_id", "challenge_index"], ascending=[True, True, False])))
+
+
+def export_employment_county(employ_map: pd.DataFrame) -> None:
+    # Employment_map only carries the most recent snapshot (currently 2025
+    # only) of graduates placed within Delaware — there's no multi-year
+    # history for this sheet yet.
+    df = employ_map.rename(columns={"school_year.x": "school_year"})
+    agg = df.groupby(["school_year", "program_id", "program_name", "county"]).size().reset_index(name="count")
+    write_json("employment_county", to_records(agg.sort_values(["school_year", "program_id", "county"])))
+
+
 def main() -> None:
     gender = pd.read_excel(F1, sheet_name="Gender_2020_2024_PROGS")
     race = pd.read_excel(F1, sheet_name="Race_2020_2024_Progs")
     gpa = pd.read_excel(F1, sheet_name="GPA_2020_2024_Progs")
+    praxis = pd.read_excel(F2, sheet_name="Praxis_2020_2024")
     praxis_fail = pd.read_excel(F2, sheet_name="Praxis_fail_2020_2024")
+    praxis_frequency = pd.read_excel(F2, sheet_name="Praxis_Frequency_5yrs")
+    praxis_difficulty = pd.read_excel(F2, sheet_name="praxis_difficulty 5yrs")
     hns = pd.read_excel(F2, sheet_name="HNS 20202024")
     employ = pd.read_excel(F2, sheet_name="Employment by Prog_20202024")
+    employ_map = pd.read_excel(F2, sheet_name="Employment_map")
     retention = pd.read_excel(F2, sheet_name="Merged_retention_yr1_yr3")
     grad_perc = pd.read_excel(F2, sheet_name="grad_perception_5yr")
     sup_perc = pd.read_excel(F2, sheet_name="sup_perception_5yr")
+    programs = pd.read_excel(F3, sheet_name="DIMProgs")
+    gpa_target = pd.read_excel(F3, sheet_name="DIM_GPA")
 
     export_gender(gender)
     export_race(race)
@@ -160,6 +234,12 @@ def main() -> None:
     export_retention(retention)
     export_perception(grad_perc, sup_perc)
     export_years(gender)
+    export_programs(programs)
+    export_gpa_target(gpa_target)
+    export_praxis_with_tests(praxis)
+    export_praxis_frequency(praxis_frequency)
+    export_praxis_difficulty(praxis_difficulty)
+    export_employment_county(employ_map)
 
     print("\nDone. Commit backend/data_summary/*.json and frontend/public/data/*.json, then redeploy.")
 

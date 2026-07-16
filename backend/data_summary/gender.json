@@ -1,32 +1,716 @@
 [
   {
     "school_year": 2020,
-    "F": 240,
-    "M": 31,
-    "total": 271
+    "program_id": 26,
+    "program_name": "Masters in Agricultural Education",
+    "gender": "F",
+    "count": 1
+  },
+  {
+    "school_year": 2020,
+    "program_id": 26,
+    "program_name": "Masters in Agricultural Education",
+    "gender": "M",
+    "count": 1
+  },
+  {
+    "school_year": 2020,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "gender": "F",
+    "count": 29
+  },
+  {
+    "school_year": 2020,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "gender": "F",
+    "count": 5
+  },
+  {
+    "school_year": 2020,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "gender": "F",
+    "count": 10
+  },
+  {
+    "school_year": 2020,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "gender": "F",
+    "count": 10
+  },
+  {
+    "school_year": 2020,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "gender": "F",
+    "count": 8
+  },
+  {
+    "school_year": 2020,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "gender": "F",
+    "count": 2
+  },
+  {
+    "school_year": 2020,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "gender": "F",
+    "count": 5
+  },
+  {
+    "school_year": 2020,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "gender": "F",
+    "count": 74
+  },
+  {
+    "school_year": 2020,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "gender": "M",
+    "count": 8
+  },
+  {
+    "school_year": 2020,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "gender": "F",
+    "count": 10
+  },
+  {
+    "school_year": 2020,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "gender": "M",
+    "count": 2
+  },
+  {
+    "school_year": 2020,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "gender": "F",
+    "count": 38
+  },
+  {
+    "school_year": 2020,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "gender": "M",
+    "count": 1
+  },
+  {
+    "school_year": 2020,
+    "program_id": 47,
+    "program_name": "Bachelors in Foreign Language Education",
+    "gender": "F",
+    "count": 4
+  },
+  {
+    "school_year": 2020,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "gender": "F",
+    "count": 24
+  },
+  {
+    "school_year": 2020,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "gender": "M",
+    "count": 7
+  },
+  {
+    "school_year": 2020,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "gender": "F",
+    "count": 4
+  },
+  {
+    "school_year": 2020,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "gender": "F",
+    "count": 6
+  },
+  {
+    "school_year": 2020,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "gender": "M",
+    "count": 4
+  },
+  {
+    "school_year": 2020,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "gender": "F",
+    "count": 8
+  },
+  {
+    "school_year": 2020,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "gender": "M",
+    "count": 7
+  },
+  {
+    "school_year": 2020,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "gender": "F",
+    "count": 2
+  },
+  {
+    "school_year": 2020,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "gender": "M",
+    "count": 1
   },
   {
     "school_year": 2021,
-    "F": 262,
-    "M": 58,
-    "total": 320
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "gender": "F",
+    "count": 46
+  },
+  {
+    "school_year": 2021,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "gender": "M",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "gender": "F",
+    "count": 7
+  },
+  {
+    "school_year": 2021,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "gender": "M",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "gender": "F",
+    "count": 13
+  },
+  {
+    "school_year": 2021,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "gender": "F",
+    "count": 7
+  },
+  {
+    "school_year": 2021,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "gender": "M",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "gender": "F",
+    "count": 6
+  },
+  {
+    "school_year": 2021,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "gender": "F",
+    "count": 6
+  },
+  {
+    "school_year": 2021,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "gender": "F",
+    "count": 4
+  },
+  {
+    "school_year": 2021,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "gender": "M",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "gender": "F",
+    "count": 77
+  },
+  {
+    "school_year": 2021,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "gender": "M",
+    "count": 5
+  },
+  {
+    "school_year": 2021,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "gender": "F",
+    "count": 28
+  },
+  {
+    "school_year": 2021,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "gender": "M",
+    "count": 7
+  },
+  {
+    "school_year": 2021,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "gender": "F",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 47,
+    "program_name": "Bachelors in Foreign Language Education",
+    "gender": "F",
+    "count": 7
+  },
+  {
+    "school_year": 2021,
+    "program_id": 47,
+    "program_name": "Bachelors in Foreign Language Education",
+    "gender": "M",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "gender": "F",
+    "count": 26
+  },
+  {
+    "school_year": 2021,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "gender": "M",
+    "count": 19
+  },
+  {
+    "school_year": 2021,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "gender": "F",
+    "count": 4
+  },
+  {
+    "school_year": 2021,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "gender": "M",
+    "count": 4
+  },
+  {
+    "school_year": 2021,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "gender": "F",
+    "count": 14
+  },
+  {
+    "school_year": 2021,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "gender": "M",
+    "count": 6
+  },
+  {
+    "school_year": 2021,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "gender": "F",
+    "count": 11
+  },
+  {
+    "school_year": 2021,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "gender": "M",
+    "count": 11
+  },
+  {
+    "school_year": 2021,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "gender": "F",
+    "count": 5
+  },
+  {
+    "school_year": 2021,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "gender": "M",
+    "count": 1
   },
   {
     "school_year": 2022,
-    "F": 137,
-    "M": 3,
-    "total": 140
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "gender": "F",
+    "count": 40
+  },
+  {
+    "school_year": 2022,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "gender": "F",
+    "count": 2
+  },
+  {
+    "school_year": 2022,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "gender": "F",
+    "count": 16
+  },
+  {
+    "school_year": 2022,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "gender": "F",
+    "count": 10
+  },
+  {
+    "school_year": 2022,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "gender": "M",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "gender": "F",
+    "count": 7
+  },
+  {
+    "school_year": 2022,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "gender": "M",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "gender": "F",
+    "count": 4
+  },
+  {
+    "school_year": 2022,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "gender": "F",
+    "count": 7
+  },
+  {
+    "school_year": 2022,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "gender": "M",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "gender": "F",
+    "count": 31
+  },
+  {
+    "school_year": 2022,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "gender": "F",
+    "count": 18
+  },
+  {
+    "school_year": 2022,
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "gender": "F",
+    "count": 2
   },
   {
     "school_year": 2023,
-    "F": 111,
-    "M": 9,
-    "total": 120
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "gender": "F",
+    "count": 41
+  },
+  {
+    "school_year": 2023,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "gender": "F",
+    "count": 6
+  },
+  {
+    "school_year": 2023,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "gender": "F",
+    "count": 13
+  },
+  {
+    "school_year": 2023,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "gender": "F",
+    "count": 5
+  },
+  {
+    "school_year": 2023,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "gender": "F",
+    "count": 5
+  },
+  {
+    "school_year": 2023,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "gender": "M",
+    "count": 3
+  },
+  {
+    "school_year": 2023,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "gender": "F",
+    "count": 7
+  },
+  {
+    "school_year": 2023,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "gender": "F",
+    "count": 4
+  },
+  {
+    "school_year": 2023,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "gender": "F",
+    "count": 6
+  },
+  {
+    "school_year": 2023,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "gender": "M",
+    "count": 2
+  },
+  {
+    "school_year": 2023,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "gender": "F",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "gender": "M",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 61,
+    "program_name": "Masters in Reading Education",
+    "gender": "F",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "gender": "M",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "gender": "F",
+    "count": 22
+  },
+  {
+    "school_year": 2023,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "gender": "M",
+    "count": 2
   },
   {
     "school_year": 2024,
-    "F": 254,
-    "M": 40,
-    "total": 294
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "gender": "F",
+    "count": 31
+  },
+  {
+    "school_year": 2024,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "gender": "F",
+    "count": 120
+  },
+  {
+    "school_year": 2024,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "gender": "M",
+    "count": 8
+  },
+  {
+    "school_year": 2024,
+    "program_id": 42,
+    "program_name": " Bachelors in Secondary English Education",
+    "gender": "F",
+    "count": 6
+  },
+  {
+    "school_year": 2024,
+    "program_id": 42,
+    "program_name": " Bachelors in Secondary English Education",
+    "gender": "M",
+    "count": 4
+  },
+  {
+    "school_year": 2024,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "gender": "F",
+    "count": 27
+  },
+  {
+    "school_year": 2024,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "gender": "M",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 46,
+    "program_name": "Masters in Foreign Language Education",
+    "gender": "F",
+    "count": 3
+  },
+  {
+    "school_year": 2024,
+    "program_id": 47,
+    "program_name": "Bachelors in Foreign Language Education",
+    "gender": "M",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "gender": "F",
+    "count": 15
+  },
+  {
+    "school_year": 2024,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "gender": "M",
+    "count": 12
+  },
+  {
+    "school_year": 2024,
+    "program_id": 61,
+    "program_name": "Masters in Reading Education",
+    "gender": "F",
+    "count": 13
+  },
+  {
+    "school_year": 2024,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "gender": "F",
+    "count": 4
+  },
+  {
+    "school_year": 2024,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "gender": "F",
+    "count": 3
+  },
+  {
+    "school_year": 2024,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "gender": "M",
+    "count": 4
+  },
+  {
+    "school_year": 2024,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "gender": "F",
+    "count": 6
+  },
+  {
+    "school_year": 2024,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "gender": "M",
+    "count": 9
+  },
+  {
+    "school_year": 2024,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "gender": "F",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "gender": "F",
+    "count": 25
+  },
+  {
+    "school_year": 2024,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "gender": "M",
+    "count": 1
   }
 ]

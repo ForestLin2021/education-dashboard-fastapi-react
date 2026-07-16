@@ -1,0 +1,191 @@
+[
+  {
+    "school_year": 2025,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "county": "Kent",
+    "count": 1
+  },
+  {
+    "school_year": 2025,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "county": "New Castle",
+    "count": 9
+  },
+  {
+    "school_year": 2025,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "county": "Sussex",
+    "count": 2
+  },
+  {
+    "school_year": 2025,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "county": "Kent",
+    "count": 1
+  },
+  {
+    "school_year": 2025,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "county": "New Castle",
+    "count": 4
+  },
+  {
+    "school_year": 2025,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "county": "New Castle",
+    "count": 4
+  },
+  {
+    "school_year": 2025,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "county": "New Castle",
+    "count": 2
+  },
+  {
+    "school_year": 2025,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "county": "New Castle",
+    "count": 2
+  },
+  {
+    "school_year": 2025,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "county": "Sussex",
+    "count": 1
+  },
+  {
+    "school_year": 2025,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "county": "New Castle",
+    "count": 1
+  },
+  {
+    "school_year": 2025,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "county": "Kent",
+    "count": 2
+  },
+  {
+    "school_year": 2025,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "county": "New Castle",
+    "count": 18
+  },
+  {
+    "school_year": 2025,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "county": "Sussex",
+    "count": 5
+  },
+  {
+    "school_year": 2025,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "county": "New Castle",
+    "count": 2
+  },
+  {
+    "school_year": 2025,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "county": "Kent",
+    "count": 4
+  },
+  {
+    "school_year": 2025,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "county": "New Castle",
+    "count": 7
+  },
+  {
+    "school_year": 2025,
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "county": "New Castle",
+    "count": 1
+  },
+  {
+    "school_year": 2025,
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "county": "Sussex",
+    "count": 1
+  },
+  {
+    "school_year": 2025,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "county": "New Castle",
+    "count": 6
+  },
+  {
+    "school_year": 2025,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "county": "Sussex",
+    "count": 1
+  },
+  {
+    "school_year": 2025,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "county": "New Castle",
+    "count": 1
+  },
+  {
+    "school_year": 2025,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "county": "Kent",
+    "count": 3
+  },
+  {
+    "school_year": 2025,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "county": "New Castle",
+    "count": 3
+  },
+  {
+    "school_year": 2025,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "county": "Kent",
+    "count": 1
+  },
+  {
+    "school_year": 2025,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "county": "New Castle",
+    "count": 4
+  },
+  {
+    "school_year": 2025,
+    "program_id": 211,
+    "program_name": "Masters in Secondary STEM Education 4+1",
+    "county": "Kent",
+    "count": 1
+  },
+  {
+    "school_year": 2025,
+    "program_id": 211,
+    "program_name": "Masters in Secondary STEM Education 4+1",
+    "county": "New Castle",
+    "count": 1
+  }
+]

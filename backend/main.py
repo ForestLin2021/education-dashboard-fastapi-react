@@ -54,7 +54,7 @@ def load_summary(name: str):
 
 
 def group_sum_pct(rows: list, group_key: str, value_key: str = "count") -> list:
-    """Sum value_key across all rows by group_key (ignoring any year dimension) and add a pct column."""
+    """Sum value_key across all rows by group_key (ignoring any year/program dimension) and add a pct column."""
     totals: dict = defaultdict(int)
     for row in rows:
         totals[row[group_key]] += row[value_key]
@@ -65,16 +65,48 @@ def group_sum_pct(rows: list, group_key: str, value_key: str = "count") -> list:
     ]
 
 
+def pivot_gender_by_year(rows: list) -> list:
+    """gender.json is now raw per-(year, program) rows; collapse across programs into one F/M/total row per year."""
+    by_year: dict = defaultdict(lambda: defaultdict(int))
+    for row in rows:
+        by_year[row["school_year"]][row["gender"]] += row["count"]
+    result = []
+    for year, counts in sorted(by_year.items()):
+        f, m = counts.get("F", 0), counts.get("M", 0)
+        result.append({"school_year": year, "F": f, "M": m, "total": f + m})
+    return result
+
+
+def sum_gpa_by_year(rows: list) -> list:
+    """gpa.json is now raw per-(year, program) rows; collapse across programs into one row per year."""
+    by_year: dict = defaultdict(lambda: {"total": 0, "above_3_count": 0, "below_3_count": 0})
+    for row in rows:
+        agg = by_year[row["school_year"]]
+        agg["total"] += row["total"]
+        agg["above_3_count"] += row["above_3_count"]
+        agg["below_3_count"] += row["below_3_count"]
+    result = []
+    for year, agg in sorted(by_year.items()):
+        total = agg["total"] or 1
+        result.append({
+            "school_year": year,
+            **agg,
+            "pct_above": round(agg["above_3_count"] / total * 100, 1),
+            "pct_below": round(agg["below_3_count"] / total * 100, 1),
+        })
+    return result
+
+
 # ═════════════════════════════════════════════
 # DATA RETRIEVAL TOOLS (for agents to use)
 # ═════════════════════════════════════════════
 
 def get_student_data() -> dict:
-    """Fetch student demographics: gender, race, GPA (all years)."""
+    """Fetch student demographics: gender, race, GPA (all years, all programs combined)."""
     return {
-        "gender_by_year": load_summary("gender"),
+        "gender_by_year": pivot_gender_by_year(load_summary("gender")),
         "race_distribution": group_sum_pct(load_summary("race"), "race"),
-        "gpa_by_year": load_summary("gpa"),
+        "gpa_by_year": sum_gpa_by_year(load_summary("gpa")),
     }
 
 
@@ -97,10 +129,30 @@ def get_employment_data() -> dict:
     }
 
 
+def sum_retention(rows: list) -> list:
+    """retention.json is now raw per-(cohort, retention_year, program) rows; collapse across programs."""
+    by_group: dict = defaultdict(lambda: {"total": 0, "Retained": 0, "Not_Retained": 0})
+    for row in rows:
+        key = (row["graduate_cohort"], row["RetentionYear"])
+        agg = by_group[key]
+        agg["total"] += row["total"]
+        agg["Retained"] += row["Retained"]
+        agg["Not_Retained"] += row["Not_Retained"]
+    result = []
+    for (cohort, retention_year), agg in by_group.items():
+        result.append({
+            "graduate_cohort": cohort,
+            "RetentionYear": retention_year,
+            **agg,
+            "Retained_PCT": round(agg["Retained"] / (agg["total"] or 1) * 100, 1),
+        })
+    return result
+
+
 def get_retention_perception_data() -> dict:
-    """Fetch retention and graduate perception data."""
+    """Fetch retention and graduate perception data (all years, all programs combined)."""
     return {
-        "retention": load_summary("retention"),
+        "retention": sum_retention(load_summary("retention")),
         "graduate_perception": load_summary("perception")["graduate"],
     }
 

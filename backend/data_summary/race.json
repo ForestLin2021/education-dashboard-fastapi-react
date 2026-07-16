@@ -1,107 +1,898 @@
 [
   {
     "school_year": 2020,
+    "program_id": 26,
+    "program_name": "Masters in Agricultural Education",
+    "race": "White, Not Hispanic",
+    "count": 2
+  },
+  {
+    "school_year": 2020,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
     "race": "Asian/Pacific Islander",
+    "count": 1
+  },
+  {
+    "school_year": 2020,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "race": "White, Not Hispanic",
+    "count": 26
+  },
+  {
+    "school_year": 2020,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "race": "White, Not Hispanic",
+    "count": 2
+  },
+  {
+    "school_year": 2020,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "race": "Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2020,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "race": "White, Not Hispanic",
+    "count": 7
+  },
+  {
+    "school_year": 2020,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "race": "White, Not Hispanic",
     "count": 10
   },
   {
     "school_year": 2020,
-    "race": "Black, Not Hispanic",
-    "count": 8
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "race": "Hispanic",
+    "count": 1
   },
   {
     "school_year": 2020,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "race": "White, Not Hispanic",
+    "count": 7
+  },
+  {
+    "school_year": 2020,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "race": "White, Not Hispanic",
+    "count": 2
+  },
+  {
+    "school_year": 2020,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "race": "White, Not Hispanic",
+    "count": 5
+  },
+  {
+    "school_year": 2020,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "race": "Asian/Pacific Islander",
+    "count": 3
+  },
+  {
+    "school_year": 2020,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "race": "Black, Not Hispanic",
+    "count": 2
+  },
+  {
+    "school_year": 2020,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "race": "White, Not Hispanic",
+    "count": 76
+  },
+  {
+    "school_year": 2020,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "race": "Black, Not Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2020,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
     "race": "Hispanic",
+    "count": 2
+  },
+  {
+    "school_year": 2020,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "race": "White, Not Hispanic",
     "count": 6
   },
   {
     "school_year": 2020,
-    "race": "White, Not Hispanic",
-    "count": 231
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "race": "Asian/Pacific Islander",
+    "count": 2
   },
   {
-    "school_year": 2021,
+    "school_year": 2020,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "race": "Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2020,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "race": "White, Not Hispanic",
+    "count": 35
+  },
+  {
+    "school_year": 2020,
+    "program_id": 47,
+    "program_name": "Bachelors in Foreign Language Education",
+    "race": "White, Not Hispanic",
+    "count": 3
+  },
+  {
+    "school_year": 2020,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
     "race": "Asian/Pacific Islander",
+    "count": 1
+  },
+  {
+    "school_year": 2020,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "race": "Black, Not Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2020,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "race": "White, Not Hispanic",
+    "count": 28
+  },
+  {
+    "school_year": 2020,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "race": "Black, Not Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2020,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "race": "White, Not Hispanic",
+    "count": 2
+  },
+  {
+    "school_year": 2020,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "race": "Asian/Pacific Islander",
+    "count": 1
+  },
+  {
+    "school_year": 2020,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "race": "Black, Not Hispanic",
+    "count": 2
+  },
+  {
+    "school_year": 2020,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "race": "White, Not Hispanic",
     "count": 7
   },
   {
-    "school_year": 2021,
+    "school_year": 2020,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
     "race": "Black, Not Hispanic",
-    "count": 10
+    "count": 1
   },
   {
-    "school_year": 2021,
+    "school_year": 2020,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
     "race": "Hispanic",
-    "count": 9
+    "count": 1
+  },
+  {
+    "school_year": 2020,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "race": "White, Not Hispanic",
+    "count": 12
+  },
+  {
+    "school_year": 2020,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "race": "Asian/Pacific Islander",
+    "count": 2
+  },
+  {
+    "school_year": 2020,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "race": "White, Not Hispanic",
+    "count": 1
   },
   {
     "school_year": 2021,
-    "race": "White, Not Hispanic",
-    "count": 260
-  },
-  {
-    "school_year": 2022,
-    "race": "Asian/Pacific Islander",
-    "count": 4
-  },
-  {
-    "school_year": 2022,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
     "race": "Black, Not Hispanic",
     "count": 5
   },
   {
-    "school_year": 2022,
+    "school_year": 2021,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
     "race": "Hispanic",
+    "count": 2
+  },
+  {
+    "school_year": 2021,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "race": "White, Not Hispanic",
+    "count": 32
+  },
+  {
+    "school_year": 2021,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "race": "Black, Not Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "race": "White, Not Hispanic",
+    "count": 6
+  },
+  {
+    "school_year": 2021,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "race": "Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "race": "White, Not Hispanic",
+    "count": 10
+  },
+  {
+    "school_year": 2021,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "race": "White, Not Hispanic",
     "count": 4
   },
   {
-    "school_year": 2022,
+    "school_year": 2021,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
     "race": "White, Not Hispanic",
-    "count": 111
+    "count": 5
+  },
+  {
+    "school_year": 2021,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "race": "White, Not Hispanic",
+    "count": 6
+  },
+  {
+    "school_year": 2021,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "race": "White, Not Hispanic",
+    "count": 5
+  },
+  {
+    "school_year": 2021,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "race": "Black, Not Hispanic",
+    "count": 2
+  },
+  {
+    "school_year": 2021,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "race": "Hispanic",
+    "count": 2
+  },
+  {
+    "school_year": 2021,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "race": "White, Not Hispanic",
+    "count": 75
+  },
+  {
+    "school_year": 2021,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "race": "Asian/Pacific Islander",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "race": "Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "race": "White, Not Hispanic",
+    "count": 28
+  },
+  {
+    "school_year": 2021,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "race": "White, Not Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 47,
+    "program_name": "Bachelors in Foreign Language Education",
+    "race": "Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 47,
+    "program_name": "Bachelors in Foreign Language Education",
+    "race": "White, Not Hispanic",
+    "count": 5
+  },
+  {
+    "school_year": 2021,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "race": "Asian/Pacific Islander",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "race": "Black, Not Hispanic",
+    "count": 2
+  },
+  {
+    "school_year": 2021,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "race": "Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "race": "White, Not Hispanic",
+    "count": 37
+  },
+  {
+    "school_year": 2021,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "race": "White, Not Hispanic",
+    "count": 6
+  },
+  {
+    "school_year": 2021,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "race": "Asian/Pacific Islander",
+    "count": 3
+  },
+  {
+    "school_year": 2021,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "race": "White, Not Hispanic",
+    "count": 17
+  },
+  {
+    "school_year": 2021,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "race": "White, Not Hispanic",
+    "count": 20
+  },
+  {
+    "school_year": 2021,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "race": "Asian/Pacific Islander",
+    "count": 2
+  },
+  {
+    "school_year": 2021,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "race": "Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "race": "White, Not Hispanic",
+    "count": 3
+  },
+  {
+    "school_year": 2022,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "race": "Asian/Pacific Islander",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "race": "Black, Not Hispanic",
+    "count": 2
+  },
+  {
+    "school_year": 2022,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "race": "Hispanic",
+    "count": 3
+  },
+  {
+    "school_year": 2022,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "race": "White, Not Hispanic",
+    "count": 31
+  },
+  {
+    "school_year": 2022,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "race": "White, Not Hispanic",
+    "count": 2
+  },
+  {
+    "school_year": 2022,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "race": "Black, Not Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "race": "White, Not Hispanic",
+    "count": 12
+  },
+  {
+    "school_year": 2022,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "race": "Asian/Pacific Islander",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "race": "Black, Not Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "race": "White, Not Hispanic",
+    "count": 8
+  },
+  {
+    "school_year": 2022,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "race": "Asian/Pacific Islander",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "race": "White, Not Hispanic",
+    "count": 5
+  },
+  {
+    "school_year": 2022,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "race": "Asian/Pacific Islander",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "race": "White, Not Hispanic",
+    "count": 3
+  },
+  {
+    "school_year": 2022,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "race": "White, Not Hispanic",
+    "count": 7
+  },
+  {
+    "school_year": 2022,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "race": "White, Not Hispanic",
+    "count": 29
+  },
+  {
+    "school_year": 2022,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "race": "Black, Not Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "race": "Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "race": "White, Not Hispanic",
+    "count": 13
+  },
+  {
+    "school_year": 2022,
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "race": "White, Not Hispanic",
+    "count": 1
   },
   {
     "school_year": 2023,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
     "race": "Asian/Pacific Islander",
+    "count": 4
+  },
+  {
+    "school_year": 2023,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "race": "Black, Not Hispanic",
+    "count": 2
+  },
+  {
+    "school_year": 2023,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "race": "White, Not Hispanic",
+    "count": 30
+  },
+  {
+    "school_year": 2023,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "race": "Black, Not Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "race": "White, Not Hispanic",
+    "count": 5
+  },
+  {
+    "school_year": 2023,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "race": "White, Not Hispanic",
+    "count": 9
+  },
+  {
+    "school_year": 2023,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "race": "White, Not Hispanic",
+    "count": 5
+  },
+  {
+    "school_year": 2023,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "race": "Asian/Pacific Islander",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "race": "White, Not Hispanic",
+    "count": 4
+  },
+  {
+    "school_year": 2023,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "race": "Black, Not Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "race": "White, Not Hispanic",
     "count": 6
   },
   {
     "school_year": 2023,
-    "race": "Black, Not Hispanic",
-    "count": 7
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "race": "White, Not Hispanic",
+    "count": 4
   },
   {
     "school_year": 2023,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "race": "White, Not Hispanic",
+    "count": 8
+  },
+  {
+    "school_year": 2023,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "race": "Asian/Pacific Islander",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "race": "White, Not Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 61,
+    "program_name": "Masters in Reading Education",
+    "race": "White, Not Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "race": "Black, Not Hispanic",
+    "count": 3
+  },
+  {
+    "school_year": 2023,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
     "race": "Hispanic",
     "count": 1
   },
   {
     "school_year": 2023,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
     "race": "White, Not Hispanic",
-    "count": 89
+    "count": 16
   },
   {
     "school_year": 2024,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "race": "Hispanic",
+    "count": 2
+  },
+  {
+    "school_year": 2024,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "race": "White, Not Hispanic",
+    "count": 28
+  },
+  {
+    "school_year": 2024,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "race": "Asian/Pacific Islander",
+    "count": 7
+  },
+  {
+    "school_year": 2024,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "race": "Black, Not Hispanic",
+    "count": 9
+  },
+  {
+    "school_year": 2024,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "race": "Hispanic",
+    "count": 3
+  },
+  {
+    "school_year": 2024,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "race": "White, Not Hispanic",
+    "count": 97
+  },
+  {
+    "school_year": 2024,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
     "race": "American Indian/Alaska Native",
     "count": 1
   },
   {
     "school_year": 2024,
-    "race": "Asian/Pacific Islander",
-    "count": 10
-  },
-  {
-    "school_year": 2024,
-    "race": "Black, Not Hispanic",
-    "count": 13
-  },
-  {
-    "school_year": 2024,
-    "race": "Hispanic",
-    "count": 6
-  },
-  {
-    "school_year": 2024,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
     "race": "White, Not Hispanic",
-    "count": 240
+    "count": 9
+  },
+  {
+    "school_year": 2024,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "race": "Black, Not Hispanic",
+    "count": 2
+  },
+  {
+    "school_year": 2024,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "race": "White, Not Hispanic",
+    "count": 25
+  },
+  {
+    "school_year": 2024,
+    "program_id": 46,
+    "program_name": "Masters in Foreign Language Education",
+    "race": "White, Not Hispanic",
+    "count": 3
+  },
+  {
+    "school_year": 2024,
+    "program_id": 47,
+    "program_name": "Bachelors in Foreign Language Education",
+    "race": "White, Not Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "race": "Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "race": "White, Not Hispanic",
+    "count": 24
+  },
+  {
+    "school_year": 2024,
+    "program_id": 61,
+    "program_name": "Masters in Reading Education",
+    "race": "Black, Not Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 61,
+    "program_name": "Masters in Reading Education",
+    "race": "White, Not Hispanic",
+    "count": 11
+  },
+  {
+    "school_year": 2024,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "race": "White, Not Hispanic",
+    "count": 4
+  },
+  {
+    "school_year": 2024,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "race": "Asian/Pacific Islander",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "race": "White, Not Hispanic",
+    "count": 4
+  },
+  {
+    "school_year": 2024,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "race": "White, Not Hispanic",
+    "count": 15
+  },
+  {
+    "school_year": 2024,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "race": "Asian/Pacific Islander",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "race": "Asian/Pacific Islander",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "race": "Black, Not Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "race": "White, Not Hispanic",
+    "count": 19
   }
 ]

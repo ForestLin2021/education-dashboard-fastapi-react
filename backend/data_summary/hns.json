@@ -1,52 +1,870 @@
 [
   {
     "school_year": 2020,
+    "program_id": 26,
+    "program_name": "Masters in Agricultural Education",
     "hns": "No",
-    "count": 67
+    "count": 1
   },
   {
     "school_year": 2020,
+    "program_id": 26,
+    "program_name": "Masters in Agricultural Education",
     "hns": "Yes",
-    "count": 21
+    "count": 1
   },
   {
-    "school_year": 2021,
+    "school_year": 2020,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
     "hns": "No",
-    "count": 64
+    "count": 6
+  },
+  {
+    "school_year": 2020,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "hns": "Yes",
+    "count": 2
+  },
+  {
+    "school_year": 2020,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "hns": "No",
+    "count": 1
+  },
+  {
+    "school_year": 2020,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "hns": "Yes",
+    "count": 3
+  },
+  {
+    "school_year": 2020,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "hns": "No",
+    "count": 2
+  },
+  {
+    "school_year": 2020,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "hns": "No",
+    "count": 3
+  },
+  {
+    "school_year": 2020,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "hns": "No",
+    "count": 1
+  },
+  {
+    "school_year": 2020,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "hns": "No",
+    "count": 1
+  },
+  {
+    "school_year": 2020,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "hns": "No",
+    "count": 17
+  },
+  {
+    "school_year": 2020,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "hns": "Yes",
+    "count": 4
+  },
+  {
+    "school_year": 2020,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "hns": "No",
+    "count": 6
+  },
+  {
+    "school_year": 2020,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "hns": "Yes",
+    "count": 2
+  },
+  {
+    "school_year": 2020,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "hns": "No",
+    "count": 7
+  },
+  {
+    "school_year": 2020,
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "hns": "No",
+    "count": 2
+  },
+  {
+    "school_year": 2020,
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "hns": "Yes",
+    "count": 5
+  },
+  {
+    "school_year": 2020,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "hns": "No",
+    "count": 6
+  },
+  {
+    "school_year": 2020,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "hns": "No",
+    "count": 1
+  },
+  {
+    "school_year": 2020,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2020,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "hns": "No",
+    "count": 5
+  },
+  {
+    "school_year": 2020,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2020,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "hns": "No",
+    "count": 7
+  },
+  {
+    "school_year": 2020,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "hns": "Yes",
+    "count": 2
+  },
+  {
+    "school_year": 2020,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "hns": "No",
+    "count": 1
   },
   {
     "school_year": 2021,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "hns": "No",
+    "count": 17
+  },
+  {
+    "school_year": 2021,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
     "hns": "Yes",
+    "count": 3
+  },
+  {
+    "school_year": 2021,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "hns": "No",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "hns": "No",
+    "count": 3
+  },
+  {
+    "school_year": 2021,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "hns": "No",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "hns": "Yes",
+    "count": 2
+  },
+  {
+    "school_year": 2021,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "hns": "No",
+    "count": 3
+  },
+  {
+    "school_year": 2021,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "hns": "No",
+    "count": 20
+  },
+  {
+    "school_year": 2021,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "hns": "Yes",
+    "count": 5
+  },
+  {
+    "school_year": 2021,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "hns": "No",
+    "count": 6
+  },
+  {
+    "school_year": 2021,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "hns": "No",
+    "count": 4
+  },
+  {
+    "school_year": 2021,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "hns": "Yes",
+    "count": 4
+  },
+  {
+    "school_year": 2021,
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "hns": "No",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 47,
+    "program_name": "Bachelors in Foreign Language Education",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "hns": "No",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "hns": "No",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "hns": "No",
+    "count": 2
+  },
+  {
+    "school_year": 2021,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "hns": "No",
+    "count": 3
+  },
+  {
+    "school_year": 2021,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "hns": "Yes",
+    "count": 2
+  },
+  {
+    "school_year": 2021,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "hns": "No",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "hns": "Yes",
+    "count": 2
+  },
+  {
+    "school_year": 2021,
+    "program_id": 162,
+    "program_name": "MPCP - Teacher of Students with Autism or with Severe Intellectual Disabilities",
+    "hns": "Yes",
+    "count": 3
+  },
+  {
+    "school_year": 2022,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "hns": "No",
+    "count": 12
+  },
+  {
+    "school_year": 2022,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "hns": "No",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "hns": "No",
+    "count": 3
+  },
+  {
+    "school_year": 2022,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "hns": "No",
+    "count": 2
+  },
+  {
+    "school_year": 2022,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "hns": "No",
+    "count": 2
+  },
+  {
+    "school_year": 2022,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "hns": "No",
+    "count": 2
+  },
+  {
+    "school_year": 2022,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "hns": "No",
+    "count": 20
+  },
+  {
+    "school_year": 2022,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "hns": "No",
+    "count": 6
+  },
+  {
+    "school_year": 2022,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "hns": "No",
+    "count": 4
+  },
+  {
+    "school_year": 2022,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "hns": "Yes",
+    "count": 2
+  },
+  {
+    "school_year": 2022,
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "hns": "No",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "hns": "No",
+    "count": 7
+  },
+  {
+    "school_year": 2022,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "hns": "No",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "hns": "No",
+    "count": 4
+  },
+  {
+    "school_year": 2022,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "hns": "No",
+    "count": 4
+  },
+  {
+    "school_year": 2022,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "hns": "No",
+    "count": 8
+  },
+  {
+    "school_year": 2023,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "hns": "No",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "hns": "No",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "hns": "No",
+    "count": 4
+  },
+  {
+    "school_year": 2023,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "hns": "No",
+    "count": 2
+  },
+  {
+    "school_year": 2023,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "hns": "No",
+    "count": 23
+  },
+  {
+    "school_year": 2023,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "hns": "Yes",
+    "count": 5
+  },
+  {
+    "school_year": 2023,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "hns": "No",
+    "count": 2
+  },
+  {
+    "school_year": 2023,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "hns": "No",
+    "count": 4
+  },
+  {
+    "school_year": 2023,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "hns": "Yes",
+    "count": 3
+  },
+  {
+    "school_year": 2023,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "hns": "No",
+    "count": 7
+  },
+  {
+    "school_year": 2023,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "hns": "No",
+    "count": 3
+  },
+  {
+    "school_year": 2023,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "hns": "No",
+    "count": 3
+  },
+  {
+    "school_year": 2023,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "hns": "No",
+    "count": 3
+  },
+  {
+    "school_year": 2023,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "hns": "No",
+    "count": 3
+  },
+  {
+    "school_year": 2023,
+    "program_id": 162,
+    "program_name": "MPCP - Teacher of Students with Autism or with Severe Intellectual Disabilities",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 211,
+    "program_name": "Masters in Secondary STEM Education 4+1",
+    "hns": "No",
+    "count": 4
+  },
+  {
+    "school_year": 2024,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "hns": "No",
+    "count": 19
+  },
+  {
+    "school_year": 2024,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "hns": "Yes",
+    "count": 2
+  },
+  {
+    "school_year": 2024,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "hns": "No",
+    "count": 6
+  },
+  {
+    "school_year": 2024,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "hns": "Yes",
+    "count": 2
+  },
+  {
+    "school_year": 2024,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "hns": "No",
+    "count": 3
+  },
+  {
+    "school_year": 2024,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "hns": "Yes",
+    "count": 2
+  },
+  {
+    "school_year": 2024,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "hns": "No",
+    "count": 2
+  },
+  {
+    "school_year": 2024,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "hns": "No",
+    "count": 2
+  },
+  {
+    "school_year": 2024,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "hns": "Yes",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "hns": "No",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "hns": "No",
     "count": 27
   },
   {
-    "school_year": 2022,
-    "hns": "No",
-    "count": 69
-  },
-  {
-    "school_year": 2022,
+    "school_year": 2024,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
     "hns": "Yes",
-    "count": 11
-  },
-  {
-    "school_year": 2023,
-    "hns": "No",
-    "count": 68
-  },
-  {
-    "school_year": 2023,
-    "hns": "Yes",
-    "count": 16
+    "count": 6
   },
   {
     "school_year": 2024,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
     "hns": "No",
-    "count": 98
+    "count": 2
   },
   {
     "school_year": 2024,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "hns": "No",
+    "count": 9
+  },
+  {
+    "school_year": 2024,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
     "hns": "Yes",
-    "count": 18
+    "count": 2
+  },
+  {
+    "school_year": 2024,
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "hns": "No",
+    "count": 3
+  },
+  {
+    "school_year": 2024,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "hns": "No",
+    "count": 10
+  },
+  {
+    "school_year": 2024,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "hns": "No",
+    "count": 2
+  },
+  {
+    "school_year": 2024,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "hns": "No",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "hns": "No",
+    "count": 6
+  },
+  {
+    "school_year": 2024,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "hns": "No",
+    "count": 3
+  },
+  {
+    "school_year": 2024,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "hns": "Yes",
+    "count": 2
+  },
+  {
+    "school_year": 2024,
+    "program_id": 211,
+    "program_name": "Masters in Secondary STEM Education 4+1",
+    "hns": "No",
+    "count": 2
+  },
+  {
+    "school_year": 2024,
+    "program_id": 211,
+    "program_name": "Masters in Secondary STEM Education 4+1",
+    "hns": "Yes",
+    "count": 1
   }
 ]

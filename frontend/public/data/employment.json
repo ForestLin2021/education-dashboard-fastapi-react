@@ -1,72 +1,1381 @@
 [
   {
     "school_year": 2020,
+    "program_id": 26,
+    "program_name": "Masters in Agricultural Education",
     "location": "DE",
-    "count": 88
+    "count": 2
   },
   {
     "school_year": 2020,
-    "location": "Not Teaching",
-    "count": 175
-  },
-  {
-    "school_year": 2021,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
     "location": "DE",
-    "count": 91
+    "count": 8
   },
   {
-    "school_year": 2021,
+    "school_year": 2020,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
     "location": "Not Teaching",
-    "count": 147
+    "count": 18
+  },
+  {
+    "school_year": 2020,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "location": "Not Teaching",
+    "count": 3
+  },
+  {
+    "school_year": 2020,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "location": "DE",
+    "count": 4
+  },
+  {
+    "school_year": 2020,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "location": "Not Teaching",
+    "count": 7
+  },
+  {
+    "school_year": 2020,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "location": "DE",
+    "count": 2
+  },
+  {
+    "school_year": 2020,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "location": "Not Teaching",
+    "count": 9
+  },
+  {
+    "school_year": 2020,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "location": "DE",
+    "count": 3
+  },
+  {
+    "school_year": 2020,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "location": "Not Teaching",
+    "count": 11
+  },
+  {
+    "school_year": 2020,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "location": "DE",
+    "count": 1
+  },
+  {
+    "school_year": 2020,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "location": "Not Teaching",
+    "count": 2
+  },
+  {
+    "school_year": 2020,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "location": "DE",
+    "count": 1
+  },
+  {
+    "school_year": 2020,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "location": "Not Teaching",
+    "count": 4
+  },
+  {
+    "school_year": 2020,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "location": "DE",
+    "count": 21
+  },
+  {
+    "school_year": 2020,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "location": "Not Teaching",
+    "count": 58
+  },
+  {
+    "school_year": 2020,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "location": "DE",
+    "count": 8
+  },
+  {
+    "school_year": 2020,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "location": "Not Teaching",
+    "count": 7
+  },
+  {
+    "school_year": 2020,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "location": "DE",
+    "count": 7
+  },
+  {
+    "school_year": 2020,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "location": "Not Teaching",
+    "count": 9
+  },
+  {
+    "school_year": 2020,
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "location": "DE",
+    "count": 7
+  },
+  {
+    "school_year": 2020,
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "location": "Not Teaching",
+    "count": 3
+  },
+  {
+    "school_year": 2020,
+    "program_id": 47,
+    "program_name": "Bachelors in Foreign Language Education",
+    "location": "Not Teaching",
+    "count": 4
+  },
+  {
+    "school_year": 2020,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "location": "DE",
+    "count": 6
+  },
+  {
+    "school_year": 2020,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "location": "Not Teaching",
+    "count": 26
+  },
+  {
+    "school_year": 2020,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "location": "DE",
+    "count": 2
+  },
+  {
+    "school_year": 2020,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "location": "Not Teaching",
+    "count": 3
+  },
+  {
+    "school_year": 2020,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "location": "DE",
+    "count": 6
+  },
+  {
+    "school_year": 2020,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "location": "Not Teaching",
+    "count": 5
+  },
+  {
+    "school_year": 2020,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "location": "DE",
+    "count": 9
+  },
+  {
+    "school_year": 2020,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "location": "Not Teaching",
+    "count": 6
+  },
+  {
+    "school_year": 2020,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "location": "DE",
+    "count": 1
   },
   {
     "school_year": 2021,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "location": "DE",
+    "count": 20
+  },
+  {
+    "school_year": 2021,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "location": "Not Teaching",
+    "count": 24
+  },
+  {
+    "school_year": 2021,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "location": "DE",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "location": "Not Teaching",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "location": "DE",
+    "count": 4
+  },
+  {
+    "school_year": 2021,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "location": "Not Teaching",
+    "count": 10
+  },
+  {
+    "school_year": 2021,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "location": "DE",
+    "count": 3
+  },
+  {
+    "school_year": 2021,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "location": "Not Teaching",
+    "count": 3
+  },
+  {
+    "school_year": 2021,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "location": "DE",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "location": "Not Teaching",
+    "count": 4
+  },
+  {
+    "school_year": 2021,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "location": "Not Teaching",
+    "count": 3
+  },
+  {
+    "school_year": 2021,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "location": "DE",
+    "count": 3
+  },
+  {
+    "school_year": 2021,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "location": "Not Teaching",
+    "count": 2
+  },
+  {
+    "school_year": 2021,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "location": "DE",
+    "count": 25
+  },
+  {
+    "school_year": 2021,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "location": "Not Teaching",
+    "count": 48
+  },
+  {
+    "school_year": 2021,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
     "location": "Out of DE",
+    "count": 3
+  },
+  {
+    "school_year": 2021,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "location": "DE",
+    "count": 7
+  },
+  {
+    "school_year": 2021,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "location": "Not Teaching",
+    "count": 12
+  },
+  {
+    "school_year": 2021,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "location": "Out of DE",
+    "count": 2
+  },
+  {
+    "school_year": 2021,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "location": "DE",
+    "count": 8
+  },
+  {
+    "school_year": 2021,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "location": "Not Teaching",
+    "count": 7
+  },
+  {
+    "school_year": 2021,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "location": "Out of DE",
+    "count": 7
+  },
+  {
+    "school_year": 2021,
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "location": "DE",
+    "count": 2
+  },
+  {
+    "school_year": 2021,
+    "program_id": 47,
+    "program_name": "Bachelors in Foreign Language Education",
+    "location": "DE",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 47,
+    "program_name": "Bachelors in Foreign Language Education",
+    "location": "Not Teaching",
+    "count": 2
+  },
+  {
+    "school_year": 2021,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "location": "DE",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "location": "Not Teaching",
+    "count": 14
+  },
+  {
+    "school_year": 2021,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "location": "Out of DE",
+    "count": 2
+  },
+  {
+    "school_year": 2021,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "location": "DE",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "location": "Not Teaching",
+    "count": 2
+  },
+  {
+    "school_year": 2021,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "location": "DE",
+    "count": 3
+  },
+  {
+    "school_year": 2021,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "location": "Not Teaching",
+    "count": 7
+  },
+  {
+    "school_year": 2021,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "location": "DE",
+    "count": 5
+  },
+  {
+    "school_year": 2021,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "location": "Not Teaching",
+    "count": 7
+  },
+  {
+    "school_year": 2021,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "location": "DE",
+    "count": 3
+  },
+  {
+    "school_year": 2021,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "location": "Not Teaching",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "location": "Out of DE",
+    "count": 1
+  },
+  {
+    "school_year": 2021,
+    "program_id": 162,
+    "program_name": "MPCP - Teacher of Students with Autism or with Severe Intellectual Disabilities",
+    "location": "DE",
+    "count": 3
+  },
+  {
+    "school_year": 2022,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "location": "DE",
+    "count": 13
+  },
+  {
+    "school_year": 2022,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "location": "Not Teaching",
+    "count": 6
+  },
+  {
+    "school_year": 2022,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "location": "Out of DE",
+    "count": 13
+  },
+  {
+    "school_year": 2022,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "location": "DE",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "location": "Out of DE",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "location": "DE",
+    "count": 4
+  },
+  {
+    "school_year": 2022,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "location": "Not Teaching",
+    "count": 4
+  },
+  {
+    "school_year": 2022,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "location": "Out of DE",
+    "count": 8
+  },
+  {
+    "school_year": 2022,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "location": "DE",
+    "count": 3
+  },
+  {
+    "school_year": 2022,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "location": "Out of DE",
+    "count": 3
+  },
+  {
+    "school_year": 2022,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "location": "DE",
+    "count": 3
+  },
+  {
+    "school_year": 2022,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "location": "Not Teaching",
+    "count": 2
+  },
+  {
+    "school_year": 2022,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "location": "Out of DE",
+    "count": 2
+  },
+  {
+    "school_year": 2022,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "location": "DE",
+    "count": 2
+  },
+  {
+    "school_year": 2022,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "location": "Not Teaching",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "location": "Out of DE",
+    "count": 2
+  },
+  {
+    "school_year": 2022,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "location": "DE",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "location": "Not Teaching",
+    "count": 7
+  },
+  {
+    "school_year": 2022,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "location": "DE",
+    "count": 21
+  },
+  {
+    "school_year": 2022,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "location": "Not Teaching",
+    "count": 21
+  },
+  {
+    "school_year": 2022,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "location": "Out of DE",
+    "count": 23
+  },
+  {
+    "school_year": 2022,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "location": "DE",
+    "count": 6
+  },
+  {
+    "school_year": 2022,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "location": "Not Teaching",
+    "count": 2
+  },
+  {
+    "school_year": 2022,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "location": "Out of DE",
+    "count": 2
+  },
+  {
+    "school_year": 2022,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "location": "DE",
+    "count": 6
+  },
+  {
+    "school_year": 2022,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "location": "Not Teaching",
+    "count": 6
+  },
+  {
+    "school_year": 2022,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "location": "Out of DE",
+    "count": 5
+  },
+  {
+    "school_year": 2022,
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "location": "DE",
+    "count": 2
+  },
+  {
+    "school_year": 2022,
+    "program_id": 47,
+    "program_name": "Bachelors in Foreign Language Education",
+    "location": "Out of DE",
+    "count": 2
+  },
+  {
+    "school_year": 2022,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "location": "DE",
+    "count": 8
+  },
+  {
+    "school_year": 2022,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "location": "Not Teaching",
+    "count": 9
+  },
+  {
+    "school_year": 2022,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "location": "Out of DE",
+    "count": 9
+  },
+  {
+    "school_year": 2022,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "location": "DE",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "location": "Not Teaching",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "location": "DE",
+    "count": 4
+  },
+  {
+    "school_year": 2022,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "location": "Out of DE",
+    "count": 3
+  },
+  {
+    "school_year": 2022,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "location": "DE",
+    "count": 5
+  },
+  {
+    "school_year": 2022,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "location": "Not Teaching",
+    "count": 1
+  },
+  {
+    "school_year": 2022,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "location": "Out of DE",
+    "count": 2
+  },
+  {
+    "school_year": 2022,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "location": "Not Teaching",
+    "count": 2
+  },
+  {
+    "school_year": 2023,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "location": "DE",
+    "count": 9
+  },
+  {
+    "school_year": 2023,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "location": "Not Teaching",
+    "count": 11
+  },
+  {
+    "school_year": 2023,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "location": "Out of DE",
+    "count": 14
+  },
+  {
+    "school_year": 2023,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "location": "Not Teaching",
+    "count": 3
+  },
+  {
+    "school_year": 2023,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "location": "DE",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "location": "Not Teaching",
+    "count": 3
+  },
+  {
+    "school_year": 2023,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "location": "Out of DE",
+    "count": 6
+  },
+  {
+    "school_year": 2023,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "location": "DE",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "location": "Not Teaching",
+    "count": 5
+  },
+  {
+    "school_year": 2023,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "location": "Out of DE",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "location": "DE",
+    "count": 5
+  },
+  {
+    "school_year": 2023,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "location": "Not Teaching",
+    "count": 3
+  },
+  {
+    "school_year": 2023,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "location": "Out of DE",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "location": "DE",
+    "count": 2
+  },
+  {
+    "school_year": 2023,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "location": "Not Teaching",
+    "count": 3
+  },
+  {
+    "school_year": 2023,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "location": "Out of DE",
+    "count": 2
+  },
+  {
+    "school_year": 2023,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "location": "Not Teaching",
+    "count": 2
+  },
+  {
+    "school_year": 2023,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "location": "Out of DE",
+    "count": 2
+  },
+  {
+    "school_year": 2023,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "location": "DE",
+    "count": 28
+  },
+  {
+    "school_year": 2023,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "location": "Not Teaching",
+    "count": 43
+  },
+  {
+    "school_year": 2023,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "location": "Out of DE",
+    "count": 9
+  },
+  {
+    "school_year": 2023,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "location": "DE",
+    "count": 3
+  },
+  {
+    "school_year": 2023,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "location": "Not Teaching",
+    "count": 2
+  },
+  {
+    "school_year": 2023,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "location": "Out of DE",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "location": "DE",
+    "count": 7
+  },
+  {
+    "school_year": 2023,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "location": "Not Teaching",
     "count": 15
   },
   {
-    "school_year": 2022,
+    "school_year": 2023,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
     "location": "DE",
-    "count": 80
-  },
-  {
-    "school_year": 2022,
-    "location": "Not Teaching",
-    "count": 62
-  },
-  {
-    "school_year": 2022,
-    "location": "Out of DE",
-    "count": 75
+    "count": 7
   },
   {
     "school_year": 2023,
-    "location": "DE",
-    "count": 84
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "location": "Not Teaching",
+    "count": 8
   },
   {
     "school_year": 2023,
-    "location": "Not Teaching",
-    "count": 116
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "location": "Out of DE",
+    "count": 2
   },
   {
     "school_year": 2023,
-    "location": "Out of DE",
-    "count": 44
-  },
-  {
-    "school_year": 2024,
-    "location": "DE",
-    "count": 116
-  },
-  {
-    "school_year": 2024,
+    "program_id": 61,
+    "program_name": "Masters in Reading Education",
     "location": "Not Teaching",
-    "count": 72
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "location": "DE",
+    "count": 4
+  },
+  {
+    "school_year": 2023,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "location": "DE",
+    "count": 4
+  },
+  {
+    "school_year": 2023,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "location": "Not Teaching",
+    "count": 2
+  },
+  {
+    "school_year": 2023,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "location": "Out of DE",
+    "count": 4
+  },
+  {
+    "school_year": 2023,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "location": "DE",
+    "count": 4
+  },
+  {
+    "school_year": 2023,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "location": "Not Teaching",
+    "count": 14
+  },
+  {
+    "school_year": 2023,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "location": "Out of DE",
+    "count": 2
+  },
+  {
+    "school_year": 2023,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "location": "DE",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "location": "DE",
+    "count": 3
+  },
+  {
+    "school_year": 2023,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "location": "Not Teaching",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 162,
+    "program_name": "MPCP - Teacher of Students with Autism or with Severe Intellectual Disabilities",
+    "location": "DE",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "program_id": 211,
+    "program_name": "Masters in Secondary STEM Education 4+1",
+    "location": "DE",
+    "count": 4
   },
   {
     "school_year": 2024,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "location": "DE",
+    "count": 21
+  },
+  {
+    "school_year": 2024,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "location": "Not Teaching",
+    "count": 4
+  },
+  {
+    "school_year": 2024,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
     "location": "Out of DE",
-    "count": 42
+    "count": 3
+  },
+  {
+    "school_year": 2024,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "location": "DE",
+    "count": 8
+  },
+  {
+    "school_year": 2024,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "location": "Not Teaching",
+    "count": 5
+  },
+  {
+    "school_year": 2024,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "location": "Out of DE",
+    "count": 5
+  },
+  {
+    "school_year": 2024,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "location": "DE",
+    "count": 5
+  },
+  {
+    "school_year": 2024,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "location": "Not Teaching",
+    "count": 6
+  },
+  {
+    "school_year": 2024,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "location": "Out of DE",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "location": "DE",
+    "count": 2
+  },
+  {
+    "school_year": 2024,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "location": "Not Teaching",
+    "count": 4
+  },
+  {
+    "school_year": 2024,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "location": "Out of DE",
+    "count": 2
+  },
+  {
+    "school_year": 2024,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "location": "DE",
+    "count": 3
+  },
+  {
+    "school_year": 2024,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "location": "Not Teaching",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "location": "Out of DE",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "location": "DE",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "location": "Not Teaching",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "location": "Out of DE",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "location": "DE",
+    "count": 33
+  },
+  {
+    "school_year": 2024,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "location": "Not Teaching",
+    "count": 23
+  },
+  {
+    "school_year": 2024,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "location": "Out of DE",
+    "count": 10
+  },
+  {
+    "school_year": 2024,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "location": "DE",
+    "count": 2
+  },
+  {
+    "school_year": 2024,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "location": "Not Teaching",
+    "count": 2
+  },
+  {
+    "school_year": 2024,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "location": "Out of DE",
+    "count": 2
+  },
+  {
+    "school_year": 2024,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "location": "DE",
+    "count": 11
+  },
+  {
+    "school_year": 2024,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "location": "Not Teaching",
+    "count": 7
+  },
+  {
+    "school_year": 2024,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "location": "Out of DE",
+    "count": 2
+  },
+  {
+    "school_year": 2024,
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "location": "DE",
+    "count": 3
+  },
+  {
+    "school_year": 2024,
+    "program_id": 47,
+    "program_name": "Bachelors in Foreign Language Education",
+    "location": "Out of DE",
+    "count": 2
+  },
+  {
+    "school_year": 2024,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "location": "DE",
+    "count": 10
+  },
+  {
+    "school_year": 2024,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "location": "Not Teaching",
+    "count": 6
+  },
+  {
+    "school_year": 2024,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "location": "Out of DE",
+    "count": 7
+  },
+  {
+    "school_year": 2024,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "location": "DE",
+    "count": 2
+  },
+  {
+    "school_year": 2024,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "location": "Not Teaching",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "location": "Out of DE",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "location": "DE",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "location": "Not Teaching",
+    "count": 4
+  },
+  {
+    "school_year": 2024,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "location": "DE",
+    "count": 6
+  },
+  {
+    "school_year": 2024,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "location": "Not Teaching",
+    "count": 3
+  },
+  {
+    "school_year": 2024,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "location": "Out of DE",
+    "count": 3
+  },
+  {
+    "school_year": 2024,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "location": "DE",
+    "count": 5
+  },
+  {
+    "school_year": 2024,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "location": "Not Teaching",
+    "count": 5
+  },
+  {
+    "school_year": 2024,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "location": "Out of DE",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "program_id": 211,
+    "program_name": "Masters in Secondary STEM Education 4+1",
+    "location": "DE",
+    "count": 3
+  },
+  {
+    "school_year": 2024,
+    "program_id": 211,
+    "program_name": "Masters in Secondary STEM Education 4+1",
+    "location": "Out of DE",
+    "count": 1
   }
 ]

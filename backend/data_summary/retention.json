@@ -2,65 +2,1281 @@
   {
     "graduate_cohort": 2020,
     "RetentionYear": "Beyond Year 1",
-    "total": 88,
-    "Retained": 75,
-    "Not_Retained": 13,
-    "Retained_PCT": 85.2
+    "program_id": 26,
+    "program_name": "Masters in Agricultural Education",
+    "total": 2,
+    "Retained": 2,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "total": 8,
+    "Retained": 7,
+    "Not_Retained": 1,
+    "Retained_PCT": 87.5
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "total": 4,
+    "Retained": 3,
+    "Not_Retained": 1,
+    "Retained_PCT": 75.0
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "total": 2,
+    "Retained": 2,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "total": 3,
+    "Retained": 3,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "total": 1,
+    "Retained": 1,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "total": 1,
+    "Retained": 1,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "total": 21,
+    "Retained": 15,
+    "Not_Retained": 6,
+    "Retained_PCT": 71.4
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "total": 8,
+    "Retained": 7,
+    "Not_Retained": 1,
+    "Retained_PCT": 87.5
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "total": 7,
+    "Retained": 7,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "total": 7,
+    "Retained": 7,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "total": 6,
+    "Retained": 4,
+    "Not_Retained": 2,
+    "Retained_PCT": 66.7
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "total": 2,
+    "Retained": 2,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "total": 6,
+    "Retained": 6,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "total": 9,
+    "Retained": 7,
+    "Not_Retained": 2,
+    "Retained_PCT": 77.8
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "total": 1,
+    "Retained": 1,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
   },
   {
     "graduate_cohort": 2020,
     "RetentionYear": "Beyond Year 3",
-    "total": 88,
-    "Retained": 51,
-    "Not_Retained": 37,
-    "Retained_PCT": 58.0
+    "program_id": 26,
+    "program_name": "Masters in Agricultural Education",
+    "total": 2,
+    "Retained": 0,
+    "Not_Retained": 2,
+    "Retained_PCT": 0.0
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "total": 8,
+    "Retained": 7,
+    "Not_Retained": 1,
+    "Retained_PCT": 87.5
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "total": 4,
+    "Retained": 2,
+    "Not_Retained": 2,
+    "Retained_PCT": 50.0
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "total": 2,
+    "Retained": 1,
+    "Not_Retained": 1,
+    "Retained_PCT": 50.0
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "total": 3,
+    "Retained": 2,
+    "Not_Retained": 1,
+    "Retained_PCT": 66.7
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "total": 1,
+    "Retained": 0,
+    "Not_Retained": 1,
+    "Retained_PCT": 0.0
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "total": 1,
+    "Retained": 1,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "total": 21,
+    "Retained": 8,
+    "Not_Retained": 13,
+    "Retained_PCT": 38.1
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "total": 8,
+    "Retained": 6,
+    "Not_Retained": 2,
+    "Retained_PCT": 75.0
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "total": 7,
+    "Retained": 4,
+    "Not_Retained": 3,
+    "Retained_PCT": 57.1
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "total": 7,
+    "Retained": 6,
+    "Not_Retained": 1,
+    "Retained_PCT": 85.7
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "total": 6,
+    "Retained": 3,
+    "Not_Retained": 3,
+    "Retained_PCT": 50.0
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "total": 2,
+    "Retained": 1,
+    "Not_Retained": 1,
+    "Retained_PCT": 50.0
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "total": 6,
+    "Retained": 3,
+    "Not_Retained": 3,
+    "Retained_PCT": 50.0
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "total": 9,
+    "Retained": 6,
+    "Not_Retained": 3,
+    "Retained_PCT": 66.7
+  },
+  {
+    "graduate_cohort": 2020,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "total": 1,
+    "Retained": 1,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
   },
   {
     "graduate_cohort": 2021,
     "RetentionYear": "Beyond Year 1",
-    "total": 91,
-    "Retained": 72,
-    "Not_Retained": 19,
-    "Retained_PCT": 79.1
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "total": 20,
+    "Retained": 19,
+    "Not_Retained": 1,
+    "Retained_PCT": 95.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "total": 1,
+    "Retained": 1,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "total": 4,
+    "Retained": 3,
+    "Not_Retained": 1,
+    "Retained_PCT": 75.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "total": 3,
+    "Retained": 2,
+    "Not_Retained": 1,
+    "Retained_PCT": 66.7
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "total": 1,
+    "Retained": 0,
+    "Not_Retained": 1,
+    "Retained_PCT": 0.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "total": 3,
+    "Retained": 2,
+    "Not_Retained": 1,
+    "Retained_PCT": 66.7
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "total": 25,
+    "Retained": 20,
+    "Not_Retained": 5,
+    "Retained_PCT": 80.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "total": 7,
+    "Retained": 5,
+    "Not_Retained": 2,
+    "Retained_PCT": 71.4
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "total": 8,
+    "Retained": 4,
+    "Not_Retained": 4,
+    "Retained_PCT": 50.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "total": 2,
+    "Retained": 2,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 47,
+    "program_name": "Bachelors in Foreign Language Education",
+    "total": 1,
+    "Retained": 0,
+    "Not_Retained": 1,
+    "Retained_PCT": 0.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "total": 1,
+    "Retained": 1,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "total": 1,
+    "Retained": 1,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "total": 3,
+    "Retained": 3,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "total": 5,
+    "Retained": 4,
+    "Not_Retained": 1,
+    "Retained_PCT": 80.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "total": 3,
+    "Retained": 2,
+    "Not_Retained": 1,
+    "Retained_PCT": 66.7
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 162,
+    "program_name": "MPCP - Teacher of Students with Autism or with Severe Intellectual Disabilities",
+    "total": 3,
+    "Retained": 3,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
   },
   {
     "graduate_cohort": 2021,
     "RetentionYear": "Beyond Year 3",
-    "total": 91,
-    "Retained": 53,
-    "Not_Retained": 38,
-    "Retained_PCT": 58.2
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "total": 20,
+    "Retained": 14,
+    "Not_Retained": 6,
+    "Retained_PCT": 70.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "total": 1,
+    "Retained": 1,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "total": 4,
+    "Retained": 2,
+    "Not_Retained": 2,
+    "Retained_PCT": 50.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "total": 3,
+    "Retained": 1,
+    "Not_Retained": 2,
+    "Retained_PCT": 33.3
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "total": 1,
+    "Retained": 0,
+    "Not_Retained": 1,
+    "Retained_PCT": 0.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "total": 3,
+    "Retained": 1,
+    "Not_Retained": 2,
+    "Retained_PCT": 33.3
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "total": 25,
+    "Retained": 17,
+    "Not_Retained": 8,
+    "Retained_PCT": 68.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "total": 7,
+    "Retained": 4,
+    "Not_Retained": 3,
+    "Retained_PCT": 57.1
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "total": 8,
+    "Retained": 1,
+    "Not_Retained": 7,
+    "Retained_PCT": 12.5
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "total": 2,
+    "Retained": 2,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 47,
+    "program_name": "Bachelors in Foreign Language Education",
+    "total": 1,
+    "Retained": 1,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "total": 1,
+    "Retained": 0,
+    "Not_Retained": 1,
+    "Retained_PCT": 0.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "total": 1,
+    "Retained": 0,
+    "Not_Retained": 1,
+    "Retained_PCT": 0.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "total": 3,
+    "Retained": 3,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "total": 5,
+    "Retained": 2,
+    "Not_Retained": 3,
+    "Retained_PCT": 40.0
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "total": 3,
+    "Retained": 2,
+    "Not_Retained": 1,
+    "Retained_PCT": 66.7
+  },
+  {
+    "graduate_cohort": 2021,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 162,
+    "program_name": "MPCP - Teacher of Students with Autism or with Severe Intellectual Disabilities",
+    "total": 3,
+    "Retained": 2,
+    "Not_Retained": 1,
+    "Retained_PCT": 66.7
   },
   {
     "graduate_cohort": 2022,
     "RetentionYear": "Beyond Year 1",
-    "total": 80,
-    "Retained": 64,
-    "Not_Retained": 16,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "total": 13,
+    "Retained": 11,
+    "Not_Retained": 2,
+    "Retained_PCT": 84.6
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "total": 1,
+    "Retained": 1,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "total": 4,
+    "Retained": 4,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "total": 3,
+    "Retained": 3,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "total": 3,
+    "Retained": 2,
+    "Not_Retained": 1,
+    "Retained_PCT": 66.7
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "total": 2,
+    "Retained": 1,
+    "Not_Retained": 1,
+    "Retained_PCT": 50.0
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "total": 1,
+    "Retained": 1,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "total": 21,
+    "Retained": 17,
+    "Not_Retained": 4,
+    "Retained_PCT": 81.0
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "total": 6,
+    "Retained": 5,
+    "Not_Retained": 1,
+    "Retained_PCT": 83.3
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "total": 6,
+    "Retained": 5,
+    "Not_Retained": 1,
+    "Retained_PCT": 83.3
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "total": 2,
+    "Retained": 1,
+    "Not_Retained": 1,
+    "Retained_PCT": 50.0
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "total": 8,
+    "Retained": 5,
+    "Not_Retained": 3,
+    "Retained_PCT": 62.5
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "total": 1,
+    "Retained": 1,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "total": 4,
+    "Retained": 3,
+    "Not_Retained": 1,
+    "Retained_PCT": 75.0
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "total": 5,
+    "Retained": 4,
+    "Not_Retained": 1,
     "Retained_PCT": 80.0
   },
   {
     "graduate_cohort": 2022,
     "RetentionYear": "Beyond Year 3",
-    "total": 80,
-    "Retained": 56,
-    "Not_Retained": 24,
-    "Retained_PCT": 70.0
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "total": 13,
+    "Retained": 10,
+    "Not_Retained": 3,
+    "Retained_PCT": 76.9
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "total": 1,
+    "Retained": 1,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "total": 4,
+    "Retained": 3,
+    "Not_Retained": 1,
+    "Retained_PCT": 75.0
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "total": 3,
+    "Retained": 3,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "total": 3,
+    "Retained": 2,
+    "Not_Retained": 1,
+    "Retained_PCT": 66.7
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "total": 2,
+    "Retained": 1,
+    "Not_Retained": 1,
+    "Retained_PCT": 50.0
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "total": 1,
+    "Retained": 1,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "total": 21,
+    "Retained": 14,
+    "Not_Retained": 7,
+    "Retained_PCT": 66.7
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "total": 6,
+    "Retained": 5,
+    "Not_Retained": 1,
+    "Retained_PCT": 83.3
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "total": 6,
+    "Retained": 5,
+    "Not_Retained": 1,
+    "Retained_PCT": 83.3
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "total": 2,
+    "Retained": 1,
+    "Not_Retained": 1,
+    "Retained_PCT": 50.0
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "total": 8,
+    "Retained": 3,
+    "Not_Retained": 5,
+    "Retained_PCT": 37.5
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "total": 1,
+    "Retained": 1,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "total": 4,
+    "Retained": 2,
+    "Not_Retained": 2,
+    "Retained_PCT": 50.0
+  },
+  {
+    "graduate_cohort": 2022,
+    "RetentionYear": "Beyond Year 3",
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "total": 5,
+    "Retained": 4,
+    "Not_Retained": 1,
+    "Retained_PCT": 80.0
   },
   {
     "graduate_cohort": 2023,
     "RetentionYear": "Beyond Year 1",
-    "total": 84,
-    "Retained": 55,
-    "Not_Retained": 29,
-    "Retained_PCT": 65.5
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "total": 9,
+    "Retained": 9,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2023,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "total": 1,
+    "Retained": 1,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2023,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "total": 1,
+    "Retained": 1,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2023,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "total": 5,
+    "Retained": 3,
+    "Not_Retained": 2,
+    "Retained_PCT": 60.0
+  },
+  {
+    "graduate_cohort": 2023,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "total": 2,
+    "Retained": 0,
+    "Not_Retained": 2,
+    "Retained_PCT": 0.0
+  },
+  {
+    "graduate_cohort": 2023,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "total": 28,
+    "Retained": 13,
+    "Not_Retained": 15,
+    "Retained_PCT": 46.4
+  },
+  {
+    "graduate_cohort": 2023,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "total": 3,
+    "Retained": 2,
+    "Not_Retained": 1,
+    "Retained_PCT": 66.7
+  },
+  {
+    "graduate_cohort": 2023,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "total": 7,
+    "Retained": 5,
+    "Not_Retained": 2,
+    "Retained_PCT": 71.4
+  },
+  {
+    "graduate_cohort": 2023,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "total": 7,
+    "Retained": 5,
+    "Not_Retained": 2,
+    "Retained_PCT": 71.4
+  },
+  {
+    "graduate_cohort": 2023,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "total": 4,
+    "Retained": 4,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2023,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "total": 4,
+    "Retained": 3,
+    "Not_Retained": 1,
+    "Retained_PCT": 75.0
+  },
+  {
+    "graduate_cohort": 2023,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "total": 4,
+    "Retained": 4,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2023,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "total": 1,
+    "Retained": 1,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2023,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "total": 3,
+    "Retained": 0,
+    "Not_Retained": 3,
+    "Retained_PCT": 0.0
+  },
+  {
+    "graduate_cohort": 2023,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 162,
+    "program_name": "MPCP - Teacher of Students with Autism or with Severe Intellectual Disabilities",
+    "total": 1,
+    "Retained": 1,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2023,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 211,
+    "program_name": "Masters in Secondary STEM Education 4+1",
+    "total": 4,
+    "Retained": 3,
+    "Not_Retained": 1,
+    "Retained_PCT": 75.0
   },
   {
     "graduate_cohort": 2024,
     "RetentionYear": "Beyond Year 1",
-    "total": 116,
-    "Retained": 80,
-    "Not_Retained": 36,
-    "Retained_PCT": 69.0
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "total": 21,
+    "Retained": 11,
+    "Not_Retained": 10,
+    "Retained_PCT": 52.4
+  },
+  {
+    "graduate_cohort": 2024,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "total": 8,
+    "Retained": 5,
+    "Not_Retained": 3,
+    "Retained_PCT": 62.5
+  },
+  {
+    "graduate_cohort": 2024,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "total": 5,
+    "Retained": 4,
+    "Not_Retained": 1,
+    "Retained_PCT": 80.0
+  },
+  {
+    "graduate_cohort": 2024,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "total": 2,
+    "Retained": 1,
+    "Not_Retained": 1,
+    "Retained_PCT": 50.0
+  },
+  {
+    "graduate_cohort": 2024,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "total": 3,
+    "Retained": 3,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2024,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "total": 1,
+    "Retained": 1,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2024,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "total": 33,
+    "Retained": 21,
+    "Not_Retained": 12,
+    "Retained_PCT": 63.6
+  },
+  {
+    "graduate_cohort": 2024,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "total": 2,
+    "Retained": 2,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2024,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "total": 11,
+    "Retained": 10,
+    "Not_Retained": 1,
+    "Retained_PCT": 90.9
+  },
+  {
+    "graduate_cohort": 2024,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "total": 3,
+    "Retained": 2,
+    "Not_Retained": 1,
+    "Retained_PCT": 66.7
+  },
+  {
+    "graduate_cohort": 2024,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "total": 10,
+    "Retained": 6,
+    "Not_Retained": 4,
+    "Retained_PCT": 60.0
+  },
+  {
+    "graduate_cohort": 2024,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "total": 2,
+    "Retained": 2,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2024,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "total": 1,
+    "Retained": 0,
+    "Not_Retained": 1,
+    "Retained_PCT": 0.0
+  },
+  {
+    "graduate_cohort": 2024,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "total": 6,
+    "Retained": 6,
+    "Not_Retained": 0,
+    "Retained_PCT": 100.0
+  },
+  {
+    "graduate_cohort": 2024,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "total": 5,
+    "Retained": 4,
+    "Not_Retained": 1,
+    "Retained_PCT": 80.0
+  },
+  {
+    "graduate_cohort": 2024,
+    "RetentionYear": "Beyond Year 1",
+    "program_id": 211,
+    "program_name": "Masters in Secondary STEM Education 4+1",
+    "total": 3,
+    "Retained": 2,
+    "Not_Retained": 1,
+    "Retained_PCT": 66.7
   }
 ]
