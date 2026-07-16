@@ -1,0 +1,4 @@
+# Only needed to run scripts/export_json.py locally/in CI.
+# Not part of the Render runtime — see backend/requirements.txt.
+pandas==2.2.2
+openpyxl==3.1.2

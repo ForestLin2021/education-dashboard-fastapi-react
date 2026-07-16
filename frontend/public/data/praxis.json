@@ -1,0 +1,37 @@
+[
+  {
+    "year": 2020,
+    "total_graduates": 263,
+    "graduates_with_pass": 226,
+    "graduates_with_no_pass": 37,
+    "pass_rate": 85.9
+  },
+  {
+    "year": 2021,
+    "total_graduates": 253,
+    "graduates_with_pass": 170,
+    "graduates_with_no_pass": 83,
+    "pass_rate": 67.2
+  },
+  {
+    "year": 2022,
+    "total_graduates": 217,
+    "graduates_with_pass": 0,
+    "graduates_with_no_pass": 217,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2023,
+    "total_graduates": 244,
+    "graduates_with_pass": 235,
+    "graduates_with_no_pass": 9,
+    "pass_rate": 96.3
+  },
+  {
+    "year": 2024,
+    "total_graduates": 231,
+    "graduates_with_pass": 230,
+    "graduates_with_no_pass": 1,
+    "pass_rate": 99.6
+  }
+]

@@ -1,0 +1,714 @@
+[
+  {
+    "year": 2020,
+    "program_id": 26,
+    "program_name": "Masters in Agricultural Education",
+    "total_graduates": 2,
+    "graduates_with_pass": 2,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2020,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "total_graduates": 3,
+    "graduates_with_pass": 3,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2020,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "total_graduates": 5,
+    "graduates_with_pass": 5,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2020,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "total_graduates": 16,
+    "graduates_with_pass": 16,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2020,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "total_graduates": 11,
+    "graduates_with_pass": 11,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2020,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "total_graduates": 1,
+    "graduates_with_pass": 1,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2020,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "total_graduates": 11,
+    "graduates_with_pass": 10,
+    "pass_rate": 90.9
+  },
+  {
+    "year": 2020,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "total_graduates": 11,
+    "graduates_with_pass": 10,
+    "pass_rate": 90.9
+  },
+  {
+    "year": 2020,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "total_graduates": 79,
+    "graduates_with_pass": 71,
+    "pass_rate": 89.9
+  },
+  {
+    "year": 2020,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "total_graduates": 15,
+    "graduates_with_pass": 13,
+    "pass_rate": 86.7
+  },
+  {
+    "year": 2020,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "total_graduates": 15,
+    "graduates_with_pass": 13,
+    "pass_rate": 86.7
+  },
+  {
+    "year": 2020,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "total_graduates": 32,
+    "graduates_with_pass": 27,
+    "pass_rate": 84.4
+  },
+  {
+    "year": 2020,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "total_graduates": 26,
+    "graduates_with_pass": 21,
+    "pass_rate": 80.8
+  },
+  {
+    "year": 2020,
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "total_graduates": 10,
+    "graduates_with_pass": 8,
+    "pass_rate": 80.0
+  },
+  {
+    "year": 2020,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "total_graduates": 14,
+    "graduates_with_pass": 11,
+    "pass_rate": 78.6
+  },
+  {
+    "year": 2020,
+    "program_id": 47,
+    "program_name": "Bachelors in Foreign Language Education",
+    "total_graduates": 4,
+    "graduates_with_pass": 2,
+    "pass_rate": 50.0
+  },
+  {
+    "year": 2020,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "total_graduates": 3,
+    "graduates_with_pass": 1,
+    "pass_rate": 33.3
+  },
+  {
+    "year": 2020,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "total_graduates": 5,
+    "graduates_with_pass": 1,
+    "pass_rate": 20.0
+  },
+  {
+    "year": 2021,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "total_graduates": 2,
+    "graduates_with_pass": 2,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2021,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "total_graduates": 5,
+    "graduates_with_pass": 5,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2021,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "total_graduates": 21,
+    "graduates_with_pass": 19,
+    "pass_rate": 90.5
+  },
+  {
+    "year": 2021,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "total_graduates": 6,
+    "graduates_with_pass": 5,
+    "pass_rate": 83.3
+  },
+  {
+    "year": 2021,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "total_graduates": 12,
+    "graduates_with_pass": 10,
+    "pass_rate": 83.3
+  },
+  {
+    "year": 2021,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "total_graduates": 17,
+    "graduates_with_pass": 13,
+    "pass_rate": 76.5
+  },
+  {
+    "year": 2021,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "total_graduates": 76,
+    "graduates_with_pass": 54,
+    "pass_rate": 71.1
+  },
+  {
+    "year": 2021,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "total_graduates": 22,
+    "graduates_with_pass": 14,
+    "pass_rate": 63.6
+  },
+  {
+    "year": 2021,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "total_graduates": 44,
+    "graduates_with_pass": 27,
+    "pass_rate": 61.4
+  },
+  {
+    "year": 2021,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "total_graduates": 5,
+    "graduates_with_pass": 3,
+    "pass_rate": 60.0
+  },
+  {
+    "year": 2021,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "total_graduates": 10,
+    "graduates_with_pass": 6,
+    "pass_rate": 60.0
+  },
+  {
+    "year": 2021,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "total_graduates": 14,
+    "graduates_with_pass": 8,
+    "pass_rate": 57.1
+  },
+  {
+    "year": 2021,
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "total_graduates": 2,
+    "graduates_with_pass": 1,
+    "pass_rate": 50.0
+  },
+  {
+    "year": 2021,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "total_graduates": 3,
+    "graduates_with_pass": 1,
+    "pass_rate": 33.3
+  },
+  {
+    "year": 2021,
+    "program_id": 47,
+    "program_name": "Bachelors in Foreign Language Education",
+    "total_graduates": 3,
+    "graduates_with_pass": 1,
+    "pass_rate": 33.3
+  },
+  {
+    "year": 2021,
+    "program_id": 162,
+    "program_name": "MPCP - Teacher of Students with Autism or with Severe Intellectual Disabilities",
+    "total_graduates": 3,
+    "graduates_with_pass": 1,
+    "pass_rate": 33.3
+  },
+  {
+    "year": 2021,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "total_graduates": 3,
+    "graduates_with_pass": 0,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2021,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "total_graduates": 5,
+    "graduates_with_pass": 0,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2022,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "total_graduates": 32,
+    "graduates_with_pass": 0,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2022,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "total_graduates": 2,
+    "graduates_with_pass": 0,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2022,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "total_graduates": 16,
+    "graduates_with_pass": 0,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2022,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "total_graduates": 6,
+    "graduates_with_pass": 0,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2022,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "total_graduates": 7,
+    "graduates_with_pass": 0,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2022,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "total_graduates": 5,
+    "graduates_with_pass": 0,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2022,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "total_graduates": 8,
+    "graduates_with_pass": 0,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2022,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "total_graduates": 65,
+    "graduates_with_pass": 0,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2022,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "total_graduates": 10,
+    "graduates_with_pass": 0,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2022,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "total_graduates": 17,
+    "graduates_with_pass": 0,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2022,
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "total_graduates": 2,
+    "graduates_with_pass": 0,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2022,
+    "program_id": 47,
+    "program_name": "Bachelors in Foreign Language Education",
+    "total_graduates": 2,
+    "graduates_with_pass": 0,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2022,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "total_graduates": 26,
+    "graduates_with_pass": 0,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2022,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "total_graduates": 2,
+    "graduates_with_pass": 0,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2022,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "total_graduates": 7,
+    "graduates_with_pass": 0,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2022,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "total_graduates": 8,
+    "graduates_with_pass": 0,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2022,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "total_graduates": 2,
+    "graduates_with_pass": 0,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2023,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "total_graduates": 34,
+    "graduates_with_pass": 34,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2023,
+    "program_id": 34,
+    "program_name": "Bachelors in Elementary Teacher Education",
+    "total_graduates": 3,
+    "graduates_with_pass": 3,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2023,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "total_graduates": 10,
+    "graduates_with_pass": 10,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2023,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "total_graduates": 7,
+    "graduates_with_pass": 7,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2023,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "total_graduates": 9,
+    "graduates_with_pass": 9,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2023,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "total_graduates": 7,
+    "graduates_with_pass": 7,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2023,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "total_graduates": 4,
+    "graduates_with_pass": 4,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2023,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "total_graduates": 80,
+    "graduates_with_pass": 80,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2023,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "total_graduates": 6,
+    "graduates_with_pass": 6,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2023,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "total_graduates": 22,
+    "graduates_with_pass": 22,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2023,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "total_graduates": 17,
+    "graduates_with_pass": 17,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2023,
+    "program_id": 61,
+    "program_name": "Masters in Reading Education",
+    "total_graduates": 1,
+    "graduates_with_pass": 1,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2023,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "total_graduates": 10,
+    "graduates_with_pass": 10,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2023,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "total_graduates": 20,
+    "graduates_with_pass": 20,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2023,
+    "program_id": 73,
+    "program_name": "Masters in Teaching English as a Second Language",
+    "total_graduates": 1,
+    "graduates_with_pass": 1,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2023,
+    "program_id": 162,
+    "program_name": "MPCP - Teacher of Students with Autism or with Severe Intellectual Disabilities",
+    "total_graduates": 1,
+    "graduates_with_pass": 1,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2023,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "total_graduates": 4,
+    "graduates_with_pass": 3,
+    "pass_rate": 75.0
+  },
+  {
+    "year": 2023,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "total_graduates": 4,
+    "graduates_with_pass": 0,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2023,
+    "program_id": 211,
+    "program_name": "Masters in Secondary STEM Education 4+1",
+    "total_graduates": 4,
+    "graduates_with_pass": 0,
+    "pass_rate": 0.0
+  },
+  {
+    "year": 2024,
+    "program_id": 30,
+    "program_name": "Bachelors in Blended Early Childhood Education",
+    "total_graduates": 28,
+    "graduates_with_pass": 28,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2024,
+    "program_id": 35,
+    "program_name": "Bachelors in Elementary Teacher Education/English as a Second Language",
+    "total_graduates": 18,
+    "graduates_with_pass": 18,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2024,
+    "program_id": 36,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School English",
+    "total_graduates": 12,
+    "graduates_with_pass": 12,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2024,
+    "program_id": 37,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Mathematics",
+    "total_graduates": 8,
+    "graduates_with_pass": 8,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2024,
+    "program_id": 38,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Science",
+    "total_graduates": 5,
+    "graduates_with_pass": 5,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2024,
+    "program_id": 39,
+    "program_name": "Bachelors in Elementary Teacher Education/Middle School Social Studies",
+    "total_graduates": 3,
+    "graduates_with_pass": 3,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2024,
+    "program_id": 40,
+    "program_name": "Bachelors in Elementary Teacher Education/Special Education",
+    "total_graduates": 66,
+    "graduates_with_pass": 66,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2024,
+    "program_id": 42,
+    "program_name": "Bachelors in Secondary English Education",
+    "total_graduates": 6,
+    "graduates_with_pass": 6,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2024,
+    "program_id": 43,
+    "program_name": "Masters in Exceptional Children and Youth - 4+1 Program",
+    "total_graduates": 20,
+    "graduates_with_pass": 20,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2024,
+    "program_id": 44,
+    "program_name": "Masters in Exceptional Children and Youth - Master's Plus Certification Program",
+    "total_graduates": 3,
+    "graduates_with_pass": 3,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2024,
+    "program_id": 47,
+    "program_name": "Bachelors in Foreign Language Education",
+    "total_graduates": 2,
+    "graduates_with_pass": 2,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2024,
+    "program_id": 58,
+    "program_name": "Bachelors in Music Education",
+    "total_graduates": 23,
+    "graduates_with_pass": 23,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2024,
+    "program_id": 65,
+    "program_name": "Bachelors in Secondary Science Education",
+    "total_graduates": 5,
+    "graduates_with_pass": 5,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2024,
+    "program_id": 66,
+    "program_name": "Bachelors in Secondary Mathematics Education",
+    "total_graduates": 5,
+    "graduates_with_pass": 5,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2024,
+    "program_id": 68,
+    "program_name": "Bachelors in Secondary Social Studies Education",
+    "total_graduates": 12,
+    "graduates_with_pass": 12,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2024,
+    "program_id": 146,
+    "program_name": "Masters in School Psychology",
+    "total_graduates": 11,
+    "graduates_with_pass": 11,
+    "pass_rate": 100.0
+  },
+  {
+    "year": 2024,
+    "program_id": 211,
+    "program_name": "Masters in Secondary STEM Education 4+1",
+    "total_graduates": 4,
+    "graduates_with_pass": 3,
+    "pass_rate": 75.0
+  }
+]

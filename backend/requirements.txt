@@ -1,8 +1,11 @@
 fastapi==0.111.0
 uvicorn[standard]==0.29.0
-pandas==2.2.2
-openpyxl==3.1.2
 python-multipart==0.0.9
 langchain==0.3.25
 langchain-google-genai==2.1.4
 langgraph==0.4.1
+
+# pandas/openpyxl are NOT needed at runtime anymore — the dashboard is
+# served as static JSON and /api/chat only reads backend/data_summary/*.json.
+# They're only needed to run scripts/export_json.py; see
+# scripts/requirements-export.txt.

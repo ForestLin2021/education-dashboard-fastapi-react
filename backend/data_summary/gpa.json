@@ -1,0 +1,42 @@
+[
+  {
+    "school_year": 2020,
+    "total": 271,
+    "above_3_count": 239,
+    "below_3_count": 32,
+    "pct_above": 88.2,
+    "pct_below": 11.8
+  },
+  {
+    "school_year": 2021,
+    "total": 320,
+    "above_3_count": 287,
+    "below_3_count": 33,
+    "pct_above": 89.7,
+    "pct_below": 10.3
+  },
+  {
+    "school_year": 2022,
+    "total": 140,
+    "above_3_count": 129,
+    "below_3_count": 11,
+    "pct_above": 92.1,
+    "pct_below": 7.9
+  },
+  {
+    "school_year": 2023,
+    "total": 120,
+    "above_3_count": 104,
+    "below_3_count": 16,
+    "pct_above": 86.7,
+    "pct_below": 13.3
+  },
+  {
+    "school_year": 2024,
+    "total": 261,
+    "above_3_count": 235,
+    "below_3_count": 26,
+    "pct_above": 90.0,
+    "pct_below": 10.0
+  }
+]

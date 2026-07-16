@@ -1,0 +1,107 @@
+[
+  {
+    "school_year": 2020,
+    "race": "Asian/Pacific Islander",
+    "count": 10
+  },
+  {
+    "school_year": 2020,
+    "race": "Black, Not Hispanic",
+    "count": 8
+  },
+  {
+    "school_year": 2020,
+    "race": "Hispanic",
+    "count": 6
+  },
+  {
+    "school_year": 2020,
+    "race": "White, Not Hispanic",
+    "count": 231
+  },
+  {
+    "school_year": 2021,
+    "race": "Asian/Pacific Islander",
+    "count": 7
+  },
+  {
+    "school_year": 2021,
+    "race": "Black, Not Hispanic",
+    "count": 10
+  },
+  {
+    "school_year": 2021,
+    "race": "Hispanic",
+    "count": 9
+  },
+  {
+    "school_year": 2021,
+    "race": "White, Not Hispanic",
+    "count": 260
+  },
+  {
+    "school_year": 2022,
+    "race": "Asian/Pacific Islander",
+    "count": 4
+  },
+  {
+    "school_year": 2022,
+    "race": "Black, Not Hispanic",
+    "count": 5
+  },
+  {
+    "school_year": 2022,
+    "race": "Hispanic",
+    "count": 4
+  },
+  {
+    "school_year": 2022,
+    "race": "White, Not Hispanic",
+    "count": 111
+  },
+  {
+    "school_year": 2023,
+    "race": "Asian/Pacific Islander",
+    "count": 6
+  },
+  {
+    "school_year": 2023,
+    "race": "Black, Not Hispanic",
+    "count": 7
+  },
+  {
+    "school_year": 2023,
+    "race": "Hispanic",
+    "count": 1
+  },
+  {
+    "school_year": 2023,
+    "race": "White, Not Hispanic",
+    "count": 89
+  },
+  {
+    "school_year": 2024,
+    "race": "American Indian/Alaska Native",
+    "count": 1
+  },
+  {
+    "school_year": 2024,
+    "race": "Asian/Pacific Islander",
+    "count": 10
+  },
+  {
+    "school_year": 2024,
+    "race": "Black, Not Hispanic",
+    "count": 13
+  },
+  {
+    "school_year": 2024,
+    "race": "Hispanic",
+    "count": 6
+  },
+  {
+    "school_year": 2024,
+    "race": "White, Not Hispanic",
+    "count": 240
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "school_year": 2020,
+    "location": "DE",
+    "count": 88
+  },
+  {
+    "school_year": 2020,
+    "location": "Not Teaching",
+    "count": 175
+  },
+  {
+    "school_year": 2021,
+    "location": "DE",
+    "count": 91
+  },
+  {
+    "school_year": 2021,
+    "location": "Not Teaching",
+    "count": 147
+  },
+  {
+    "school_year": 2021,
+    "location": "Out of DE",
+    "count": 15
+  },
+  {
+    "school_year": 2022,
+    "location": "DE",
+    "count": 80
+  },
+  {
+    "school_year": 2022,
+    "location": "Not Teaching",
+    "count": 62
+  },
+  {
+    "school_year": 2022,
+    "location": "Out of DE",
+    "count": 75
+  },
+  {
+    "school_year": 2023,
+    "location": "DE",
+    "count": 84
+  },
+  {
+    "school_year": 2023,
+    "location": "Not Teaching",
+    "count": 116
+  },
+  {
+    "school_year": 2023,
+    "location": "Out of DE",
+    "count": 44
+  },
+  {
+    "school_year": 2024,
+    "location": "DE",
+    "count": 116
+  },
+  {
+    "school_year": 2024,
+    "location": "Not Teaching",
+    "count": 72
+  },
+  {
+    "school_year": 2024,
+    "location": "Out of DE",
+    "count": 42
+  }
+]

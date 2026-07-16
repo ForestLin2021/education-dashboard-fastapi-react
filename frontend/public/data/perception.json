@@ -1,0 +1,86 @@
+{
+  "graduate": [
+    {
+      "school_year": "2021",
+      "instrDesg": 3.377,
+      "contKnow": 3.567,
+      "classMgt": 3.269,
+      "instrPrac": 3.55,
+      "profResp": 3.549
+    },
+    {
+      "school_year": "2022",
+      "instrDesg": 2.619,
+      "contKnow": 3.058,
+      "classMgt": 2.396,
+      "instrPrac": 2.808,
+      "profResp": 2.594
+    },
+    {
+      "school_year": "2023",
+      "instrDesg": 3.148,
+      "contKnow": 3.147,
+      "classMgt": 2.511,
+      "instrPrac": 2.607,
+      "profResp": 2.917
+    },
+    {
+      "school_year": "2024",
+      "instrDesg": 3.152,
+      "contKnow": 3.671,
+      "classMgt": 3.452,
+      "instrPrac": 3.4,
+      "profResp": 3.161
+    },
+    {
+      "school_year": "2025",
+      "instrDesg": 3.317,
+      "contKnow": 3.562,
+      "classMgt": 2.844,
+      "instrPrac": 3.444,
+      "profResp": 3.156
+    }
+  ],
+  "supervisor": [
+    {
+      "school_year": "2021",
+      "instrDesg": 3.296,
+      "contKnow": 3.457,
+      "classMgt": 3.446,
+      "instrPrac": 3.329,
+      "profResp": 3.571
+    },
+    {
+      "school_year": "2022",
+      "instrDesg": 3.136,
+      "contKnow": 3.318,
+      "classMgt": 3.076,
+      "instrPrac": 3.191,
+      "profResp": 3.432
+    },
+    {
+      "school_year": "2023",
+      "instrDesg": 3.286,
+      "contKnow": 3.143,
+      "classMgt": 3.571,
+      "instrPrac": 3.486,
+      "profResp": 3.661
+    },
+    {
+      "school_year": "2024",
+      "instrDesg": 3.33,
+      "contKnow": 3.392,
+      "classMgt": 3.013,
+      "instrPrac": 3.277,
+      "profResp": 3.442
+    },
+    {
+      "school_year": "2025",
+      "instrDesg": 3.313,
+      "contKnow": 3.415,
+      "classMgt": 3.16,
+      "instrPrac": 3.308,
+      "profResp": 3.558
+    }
+  ]
+}

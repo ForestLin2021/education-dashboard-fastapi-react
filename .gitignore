@@ -209,3 +209,8 @@ __marimo__/
 # Frontend (React)
 frontend/node_modules/
 frontend/dist/
+
+# The Python-packaging "lib/" rule above also matches frontend/src/lib/ —
+# un-ignore it, that's real source (frontend/src/lib/staticData.ts).
+!frontend/src/lib/
+!frontend/src/lib/**

@@ -1,3 +1,6 @@
+# Optional service — only powers the chat (/api/chat) feature. The dashboard
+# itself (KPIs/charts/filters) is static JSON served by the Vercel frontend
+# and does not call this service at all. See ../README.md.
 services:
   - type: web
     name: epp-dashboard-backend
@@ -5,6 +8,6 @@ services:
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
-      - key: ANTHROPIC_API_KEY
+      - key: GEMINI_API_KEY
         sync: false   # 手動在 Render Dashboard 填入
     autoDeploy: true

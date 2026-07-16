@@ -1,0 +1,52 @@
+[
+  {
+    "school_year": 2020,
+    "hns": "No",
+    "count": 67
+  },
+  {
+    "school_year": 2020,
+    "hns": "Yes",
+    "count": 21
+  },
+  {
+    "school_year": 2021,
+    "hns": "No",
+    "count": 64
+  },
+  {
+    "school_year": 2021,
+    "hns": "Yes",
+    "count": 27
+  },
+  {
+    "school_year": 2022,
+    "hns": "No",
+    "count": 69
+  },
+  {
+    "school_year": 2022,
+    "hns": "Yes",
+    "count": 11
+  },
+  {
+    "school_year": 2023,
+    "hns": "No",
+    "count": 68
+  },
+  {
+    "school_year": 2023,
+    "hns": "Yes",
+    "count": 16
+  },
+  {
+    "school_year": 2024,
+    "hns": "No",
+    "count": 98
+  },
+  {
+    "school_year": 2024,
+    "hns": "Yes",
+    "count": 18
+  }
+]

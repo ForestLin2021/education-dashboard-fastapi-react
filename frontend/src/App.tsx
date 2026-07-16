@@ -1,11 +1,14 @@
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect, useCallback, useMemo } from "react";
 import {
   BarChart, Bar, LineChart, Line, RadarChart, Radar, PolarGrid,
   PolarAngleAxis, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid,
   Tooltip, Legend, ResponsiveContainer,
 } from "recharts";
+import { useStaticData, useYearFilteredData, useGroupedByYear } from "./lib/staticData";
 
 // ─── CONFIG ──────────────────────────────────────────────────────────────────
+// Dashboard charts/KPIs read static JSON from public/data/ (see lib/staticData.ts).
+// The backend is only used for the chat feature below.
 const API = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 // ─── TYPES ───────────────────────────────────────────────────────────────────
@@ -93,33 +96,6 @@ interface RadarRow {
   dim: string;
   Graduate: number;
   Supervisor: number;
-}
-
-// ─── DATA FETCHING HOOK ───────────────────────────────────────────────────────
-function useAPI<T>(path: string, params: Record<string, string | number> = {}) {
-  const [data, setData]       = useState<T | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError]     = useState<string | null>(null);
-
-  const query = Object.entries(params)
-    .filter(([, v]) => v !== null && v !== undefined && v !== "")
-    .map(([k, v]) => `${k}=${encodeURIComponent(v)}`)
-    .join("&");
-
-  const url = `${API}${path}${query ? "?" + query : ""}`;
-
-  useEffect(() => {
-    let cancelled = false;
-    setLoading(true);
-    setError(null);
-    fetch(url)
-      .then(r => { if (!r.ok) throw new Error(r.statusText); return r.json(); })
-      .then((d: T) => { if (!cancelled) { setData(d); setLoading(false); } })
-      .catch((e: Error) => { if (!cancelled) { setError(e.message); setLoading(false); } });
-    return () => { cancelled = true; };
-  }, [url]);
-
-  return { data, loading, error };
 }
 
 // ─── COLOURS ─────────────────────────────────────────────────────────────────
@@ -353,11 +329,11 @@ const TABS: Tab[] = [
 
 // ── Overview ──────────────────────────────────────────────────────────────────
 function OverviewTab({ filters }: { filters: Filters }) {
-  const { data: praxisData, loading: lP } = useAPI<PraxisRow[]>("/api/graduates/praxis", { year: filters.year });
-  const { data: empData,    loading: lE } = useAPI<EmploymentRow[]>("/api/graduates/employment", { year: filters.year });
-  const { data: retData,    loading: lR } = useAPI<RetentionRow[]>("/api/graduates/retention");
-  const { data: gpaData,    loading: lG } = useAPI<GpaRow[]>("/api/students/gpa");
-  const { data: praxisAll }               = useAPI<PraxisRow[]>("/api/graduates/praxis");
+  const { data: praxisData, loading: lP } = useYearFilteredData<PraxisRow>("praxis", filters.year, "year");
+  const { data: empData,    loading: lE } = useGroupedByYear("employment", filters.year, "location");
+  const { data: retData,    loading: lR } = useStaticData<RetentionRow[]>("retention");
+  const { data: gpaData,    loading: lG } = useStaticData<GpaRow[]>("gpa");
+  const { data: praxisAll }               = useStaticData<PraxisRow[]>("praxis");
 
   const latest    = praxisData?.[praxisData.length - 1];
   const empTotal  = empData?.reduce((s, d) => s + d.count, 0) ?? 0;
@@ -392,7 +368,7 @@ function OverviewTab({ filters }: { filters: Filters }) {
           {lE ? <Spinner /> : (
             <ResponsiveContainer width="100%" height={210}>
               <PieChart>
-                <Pie data={empData ?? []} cx="50%" cy="50%" outerRadius={80} dataKey="count"
+                <Pie data={empData ?? []} cx="50%" cy="50%" outerRadius={80} dataKey="count" isAnimationActive={false}
                   label={({ location, pct }: EmploymentRow) => `${location}: ${pct}%`}>
                   {empData?.map((_, i) => <Cell key={i} fill={PIE_COLORS[i]} />)}
                 </Pie>
@@ -436,9 +412,9 @@ function OverviewTab({ filters }: { filters: Filters }) {
 
 // ── Students ──────────────────────────────────────────────────────────────────
 function StudentsTab({ filters }: { filters: Filters }) {
-  const { data: genderData, loading: lG }   = useAPI<GenderRow[]>("/api/students/gender", { year: filters.year });
-  const { data: raceData,   loading: lR }   = useAPI<RaceRow[]>("/api/students/race",     { year: filters.year });
-  const { data: gpaData,    loading: lGPA } = useAPI<GpaRow[]>("/api/students/gpa",       { year: filters.year });
+  const { data: genderData, loading: lG }   = useYearFilteredData<GenderRow>("gender", filters.year);
+  const { data: raceData,   loading: lR }   = useGroupedByYear("race", filters.year, "race");
+  const { data: gpaData,    loading: lGPA } = useYearFilteredData<GpaRow>("gpa", filters.year);
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
@@ -462,7 +438,7 @@ function StudentsTab({ filters }: { filters: Filters }) {
           {lR ? <Spinner /> : (
             <ResponsiveContainer width="100%" height={230}>
               <PieChart>
-                <Pie data={raceData ?? []} cx="50%" cy="50%" outerRadius={85} dataKey="count"
+                <Pie data={raceData ?? []} cx="50%" cy="50%" outerRadius={85} dataKey="count" isAnimationActive={false}
                   label={({ race, pct }: RaceRow) => `${race}: ${pct}%`}>
                   {raceData?.map((_, i) => <Cell key={i} fill={PIE_COLORS[i]} />)}
                 </Pie>
@@ -493,8 +469,8 @@ function StudentsTab({ filters }: { filters: Filters }) {
 
 // ── Graduates ─────────────────────────────────────────────────────────────────
 function GraduatesTab({ filters }: { filters: Filters }) {
-  const { data: praxisAll, loading: lP } = useAPI<PraxisRow[]>("/api/graduates/praxis");
-  const { data: byProg,    loading: lB } = useAPI<PraxisByProgramRow[]>("/api/graduates/praxis/by-program", { year: filters.year || 2024 });
+  const { data: praxisAll, loading: lP } = useStaticData<PraxisRow[]>("praxis");
+  const { data: byProg,    loading: lB } = useYearFilteredData<PraxisByProgramRow>("praxis_by_program", filters.year || "2024", "year");
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
@@ -555,9 +531,9 @@ function GraduatesTab({ filters }: { filters: Filters }) {
 
 // ── Outcomes ──────────────────────────────────────────────────────────────────
 function OutcomesTab({ filters }: { filters: Filters }) {
-  const { data: empData, loading: lE } = useAPI<EmploymentRow[]>("/api/graduates/employment", { year: filters.year });
-  const { data: hnsData, loading: lH } = useAPI<HnsRow[]>("/api/graduates/hns",              { year: filters.year });
-  const { data: retData, loading: lR } = useAPI<RetentionRow[]>("/api/graduates/retention");
+  const { data: empData, loading: lE } = useGroupedByYear("employment", filters.year, "location");
+  const { data: hnsData, loading: lH } = useGroupedByYear("hns", filters.year, "hns");
+  const { data: retData, loading: lR } = useStaticData<RetentionRow[]>("retention");
 
   const yr1 = retData?.filter(d => d.RetentionYear === "Beyond Year 1") ?? [];
   const yr3 = retData?.filter(d => d.RetentionYear === "Beyond Year 3") ?? [];
@@ -574,7 +550,7 @@ function OutcomesTab({ filters }: { filters: Filters }) {
           {lE ? <Spinner /> : (
             <ResponsiveContainer width="100%" height={230}>
               <PieChart>
-                <Pie data={empData ?? []} cx="50%" cy="50%" outerRadius={85} dataKey="count"
+                <Pie data={empData ?? []} cx="50%" cy="50%" outerRadius={85} dataKey="count" isAnimationActive={false}
                   label={({ location, pct }: EmploymentRow) => `${location}: ${pct}%`}>
                   {empData?.map((_, i) => <Cell key={i} fill={PIE_COLORS[i]} />)}
                 </Pie>
@@ -588,7 +564,7 @@ function OutcomesTab({ filters }: { filters: Filters }) {
           {lH ? <Spinner /> : (
             <ResponsiveContainer width="100%" height={230}>
               <PieChart>
-                <Pie data={hnsData ?? []} cx="50%" cy="50%" outerRadius={85} dataKey="count"
+                <Pie data={hnsData ?? []} cx="50%" cy="50%" outerRadius={85} dataKey="count" isAnimationActive={false}
                   label={({ hns, count }: HnsRow) => `${hns}: ${count}`}>
                   {hnsData?.map((_, i) => <Cell key={i} fill={[C.red, C.blue][i]} />)}
                 </Pie>
@@ -633,8 +609,14 @@ const DIMS: Dim[] = [
 ];
 
 function PerceptionTab({ filters }: { filters: Filters }) {
-  const { data: gradData, loading: lG } = useAPI<PerceptionRow[]>("/api/graduates/perception", { rater: "graduate",   year: filters.year });
-  const { data: supData,  loading: lS } = useAPI<PerceptionRow[]>("/api/graduates/perception", { rater: "supervisor", year: filters.year });
+  const { data: perception, loading: lPerc } = useStaticData<{ graduate: PerceptionRow[]; supervisor: PerceptionRow[] }>("perception");
+  const gradData = useMemo(() => (
+    !perception ? null : filters.year ? perception.graduate.filter(d => d.school_year === filters.year) : perception.graduate
+  ), [perception, filters.year]);
+  const supData = useMemo(() => (
+    !perception ? null : filters.year ? perception.supervisor.filter(d => d.school_year === filters.year) : perception.supervisor
+  ), [perception, filters.year]);
+  const lG = lPerc, lS = lPerc;
 
   const gradLatest = gradData?.[gradData.length - 1];
   const supLatest  = supData?.[supData.length - 1];
@@ -707,7 +689,7 @@ export default function App() {
   const [chatOpen,   setChatOpen]   = useState(false);
   const [yearFilter, setYearFilter] = useState("");
 
-  const { data: yearsData } = useAPI<YearsResponse>("/api/years");
+  const { data: yearsData } = useStaticData<YearsResponse>("years");
 
   const yearOptions: SelectOption[] = [
     { value: "", label: "All Years" },
@@ -743,7 +725,7 @@ export default function App() {
               <Select value={yearFilter} onChange={setYearFilter} options={yearOptions} label="Year:" />
               <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
                 <div style={{ width: 7, height: 7, borderRadius: "50%", background: C.green }} />
-                <span style={{ color: "#64748b", fontSize: 12 }}>Live API</span>
+                <span style={{ color: "#64748b", fontSize: 12 }}>Static Data</span>
               </div>
             </div>
           </div>
