@@ -7,6 +7,7 @@ import {
 import { useStaticData, useFilteredData, useGroupedData, useGenderData, useGpaData, useRetentionData } from "./lib/staticData";
 import ComplianceGauge from "./components/ComplianceGauge";
 import DelawareCountyMap from "./components/DelawareCountyMap";
+import doeLogo from "./assets/doe-logo.png";
 
 // ─── CONFIG ──────────────────────────────────────────────────────────────────
 // Dashboard charts/KPIs read static JSON from public/data/ (see lib/staticData.ts).
@@ -117,23 +118,24 @@ interface EmploymentCountyRow {
 }
 
 // ─── COLOURS ─────────────────────────────────────────────────────────────────
+// Delaware DOE EPP Report theme (DOE_EPP_Report_Theme_v2.json)
 const C = {
-  blue:   "#2563eb",
-  purple: "#7c3aed",
-  teal:   "#0891b2",
-  green:  "#16a34a",
-  red:    "#dc2626",
-  amber:  "#b45309",
-  slate:  "#94a3b8",
+  blue:   "#144468", // tableAccent / primary
+  purple: "#9C27B0",
+  teal:   "#76A5AF",
+  green:  "#0F9D58",
+  red:    "#DB4437",
+  amber:  "#F4B400",
+  slate:  "#6E7781",
 } as const;
 
-const PIE_COLORS = [C.blue, C.purple, C.teal, C.green, C.amber];
+const PIE_COLORS = ["#144468", "#6E7781", "#76A5AF", "#F4B400", "#0F9D58", "#DB4437", "#B0BEC5", "#9C27B0"];
 
 // ─── SMALL COMPONENTS ────────────────────────────────────────────────────────
 const Spinner = () => (
   <div style={{ display: "flex", justifyContent: "center", padding: 32 }}>
     <div style={{
-      width: 32, height: 32, border: `3px solid #e2e8f0`,
+      width: 32, height: 32, border: `3px solid #E0E0E0`,
       borderTop: `3px solid ${C.blue}`, borderRadius: "50%",
       animation: "spin 0.8s linear infinite",
     }} />
@@ -151,11 +153,11 @@ interface KPICardProps {
 }
 const KPICard = ({ label, value, sub, color = C.blue, trend }: KPICardProps) => (
   <div style={{
-    background: "#fff", borderRadius: 16, padding: "20px 24px",
-    boxShadow: "0 2px 12px rgba(0,0,0,0.06)", borderLeft: `4px solid ${color}`,
+    background: "#fff", borderRadius: 0, padding: "20px 24px",
+    border: "1px solid #E0E0E0", borderLeft: `4px solid ${color}`,
   }}>
-    <span style={{ fontSize: 11, color: "#64748b", fontFamily: "DM Sans,sans-serif", letterSpacing: ".06em", textTransform: "uppercase" }}>{label}</span>
-    <div style={{ fontSize: 34, fontWeight: 700, color: "#0f172a", fontFamily: "Fraunces,serif", lineHeight: 1.1, marginTop: 4 }}>
+    <span style={{ fontSize: 11, color: "#6E7781", fontFamily: "DM Sans,sans-serif", letterSpacing: ".06em", textTransform: "uppercase" }}>{label}</span>
+    <div style={{ fontSize: 34, fontWeight: 700, color: "#333333", fontFamily: "Playfair Display,serif", lineHeight: 1.1, marginTop: 4 }}>
       {value}
       {trend != null && (
         <span style={{ fontSize: 13, fontWeight: 500, color: trend >= 0 ? C.green : C.red, marginLeft: 8 }}>
@@ -163,7 +165,7 @@ const KPICard = ({ label, value, sub, color = C.blue, trend }: KPICardProps) => 
         </span>
       )}
     </div>
-    {sub && <div style={{ fontSize: 12, color: "#94a3b8", marginTop: 2, fontFamily: "DM Sans,sans-serif" }}>{sub}</div>}
+    {sub && <div style={{ fontSize: 12, color: "#9AA1A6", marginTop: 2, fontFamily: "DM Sans,sans-serif" }}>{sub}</div>}
   </div>
 );
 
@@ -174,11 +176,11 @@ interface ChartCardProps {
   tipColor?: string;
 }
 const ChartCard = ({ title, children, tip, tipColor = C.blue }: ChartCardProps) => (
-  <div style={{ background: "#fff", borderRadius: 16, padding: "20px 24px", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}>
-    <p style={{ margin: "0 0 14px", fontFamily: "DM Sans,sans-serif", fontSize: 12, fontWeight: 700, color: "#64748b", textTransform: "uppercase", letterSpacing: ".06em" }}>{title}</p>
+  <div style={{ background: "#fff", borderRadius: 0, padding: "20px 24px", border: "1px solid #E0E0E0" }}>
+    <p style={{ margin: "0 0 14px", fontFamily: "DM Sans,sans-serif", fontSize: 12, fontWeight: 700, color: "#6E7781", textTransform: "uppercase", letterSpacing: ".06em" }}>{title}</p>
     {children}
     {tip && (
-      <div style={{ background: `${tipColor}12`, borderLeft: `3px solid ${tipColor}`, borderRadius: "0 8px 8px 0", padding: "9px 13px", marginTop: 12, fontSize: 12.5, color: "#334155", fontFamily: "DM Sans,sans-serif" }}>
+      <div style={{ background: `${tipColor}12`, borderLeft: `3px solid ${tipColor}`, borderRadius: "0 8px 8px 0", padding: "9px 13px", marginTop: 12, fontSize: 12.5, color: "#4D4D4D", fontFamily: "DM Sans,sans-serif" }}>
         💡 {tip}
       </div>
     )}
@@ -193,10 +195,10 @@ interface SelectProps {
 }
 const Select = ({ value, onChange, options, label }: SelectProps) => (
   <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-    <span style={{ fontSize: 12, color: "#64748b", fontFamily: "DM Sans,sans-serif", whiteSpace: "nowrap" }}>{label}</span>
+    <span style={{ fontSize: 12, color: "#6E7781", fontFamily: "DM Sans,sans-serif", whiteSpace: "nowrap" }}>{label}</span>
     <select value={value} onChange={e => onChange(e.target.value)} style={{
-      border: "1px solid #e2e8f0", borderRadius: 8, padding: "5px 10px",
-      fontFamily: "DM Sans,sans-serif", fontSize: 13, color: "#1e293b", background: "#fff", cursor: "pointer",
+      border: "1px solid #E0E0E0", borderRadius: 8, padding: "5px 10px",
+      fontFamily: "DM Sans,sans-serif", fontSize: 13, color: "#4D4D4D", background: "#fff", cursor: "pointer",
       maxWidth: 220,
     }}>
       {options.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
@@ -228,12 +230,12 @@ function InfoPanel({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }
       display: "flex", alignItems: "flex-start", justifyContent: "center", padding: "10vh 16px",
     }} onClick={onClose}>
       <div onClick={e => e.stopPropagation()} style={{
-        background: "#fff", borderRadius: 16, maxWidth: 520, width: "100%",
-        boxShadow: "0 20px 60px rgba(0,0,0,.25)", overflow: "hidden",
+        background: "#fff", borderRadius: 0, maxWidth: 520, width: "100%",
+        border: "1px solid #E0E0E0", boxShadow: "0 12px 40px rgba(0,0,0,.12)", overflow: "hidden",
       }}>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "16px 20px", borderBottom: "1px solid #e2e8f0" }}>
-          <span style={{ fontFamily: "Fraunces,serif", fontWeight: 700, fontSize: 17, color: "#0f172a" }}>ℹ️ Dashboard Info</span>
-          <button onClick={onClose} style={{ background: "#f1f5f9", border: "none", borderRadius: 8, cursor: "pointer", width: 28, height: 28, fontSize: 16 }}>×</button>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "16px 20px", borderBottom: "1px solid #E0E0E0" }}>
+          <span style={{ fontFamily: "Playfair Display,serif", fontWeight: 700, fontSize: 17, color: "#333333" }}>ℹ️ Dashboard Info</span>
+          <button onClick={onClose} style={{ background: "#EFEFEF", border: "none", borderRadius: 8, cursor: "pointer", width: 28, height: 28, fontSize: 16 }}>×</button>
         </div>
         <div style={{ padding: "16px 20px", display: "flex", flexDirection: "column", gap: 18 }}>
           {INFO_SECTIONS.map(s => (
@@ -304,14 +306,14 @@ function ChatPanel({ isOpen, onClose }: ChatPanelProps) {
       position: "fixed", right: 24, bottom: 24, width: 390, height: 580,
       background: "#fff", borderRadius: 20, boxShadow: "0 20px 60px rgba(0,0,0,0.18)",
       display: "flex", flexDirection: "column", zIndex: 1000,
-      border: "1px solid #e2e8f0", overflow: "hidden",
+      border: "1px solid #E0E0E0", overflow: "hidden",
     }}>
       {/* header */}
-      <div style={{ background: "linear-gradient(135deg,#1e40af,#3b82f6)", padding: "15px 20px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+      <div style={{ background: C.blue, padding: "15px 20px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
           <div style={{ width: 36, height: 36, borderRadius: "50%", background: "rgba(255,255,255,.2)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18 }}>🎓</div>
           <div>
-            <div style={{ color: "#fff", fontFamily: "Fraunces,serif", fontWeight: 700, fontSize: 15 }}>EPP Data Assistant</div>
+            <div style={{ color: "#fff", fontFamily: "Playfair Display,serif", fontWeight: 700, fontSize: 15 }}>EPP Data Assistant</div>
             <div style={{ color: "rgba(255,255,255,.65)", fontSize: 11, fontFamily: "DM Sans,sans-serif" }}>Powered by Gemini AI · Live Data</div>
           </div>
         </div>
@@ -325,16 +327,16 @@ function ChatPanel({ isOpen, onClose }: ChatPanelProps) {
             <div style={{
               maxWidth: "85%", padding: "10px 14px",
               borderRadius: m.role === "user" ? "16px 16px 4px 16px" : "16px 16px 16px 4px",
-              background: m.role === "user" ? C.blue : "#f1f5f9",
-              color: m.role === "user" ? "#fff" : "#1e293b",
+              background: m.role === "user" ? C.blue : "#EFEFEF",
+              color: m.role === "user" ? "#fff" : "#4D4D4D",
               fontFamily: "DM Sans,sans-serif", fontSize: 13.5, lineHeight: 1.6, whiteSpace: "pre-wrap",
             }}>{m.content}</div>
           </div>
         ))}
         {loading && (
-          <div style={{ display: "flex", gap: 5, padding: "10px 14px", background: "#f1f5f9", borderRadius: "16px 16px 16px 4px", width: "fit-content" }}>
+          <div style={{ display: "flex", gap: 5, padding: "10px 14px", background: "#EFEFEF", borderRadius: "16px 16px 16px 4px", width: "fit-content" }}>
             {[0, 1, 2].map(i => (
-              <div key={i} style={{ width: 7, height: 7, borderRadius: "50%", background: "#94a3b8", animation: "bounce 1.2s infinite", animationDelay: `${i * 0.2}s` }} />
+              <div key={i} style={{ width: 7, height: 7, borderRadius: "50%", background: "#9AA1A6", animation: "bounce 1.2s infinite", animationDelay: `${i * 0.2}s` }} />
             ))}
             <style>{`@keyframes bounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-6px)}}`}</style>
           </div>
@@ -347,8 +349,8 @@ function ChatPanel({ isOpen, onClose }: ChatPanelProps) {
         <div style={{ padding: "0 14px 8px", display: "flex", flexWrap: "wrap", gap: 5 }}>
           {QUICK.map(q => (
             <button key={q} onClick={() => send(q)} style={{
-              background: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: 20,
-              padding: "4px 10px", fontSize: 11.5, color: "#1d4ed8", cursor: "pointer",
+              background: "#EAF0F5", border: "1px solid #C7D5E0", borderRadius: 20,
+              padding: "4px 10px", fontSize: 11.5, color: C.blue, cursor: "pointer",
               fontFamily: "DM Sans,sans-serif",
             }}>{q}</button>
           ))}
@@ -356,16 +358,16 @@ function ChatPanel({ isOpen, onClose }: ChatPanelProps) {
       )}
 
       {/* input */}
-      <div style={{ padding: "11px 14px", borderTop: "1px solid #e2e8f0", display: "flex", gap: 8 }}>
+      <div style={{ padding: "11px 14px", borderTop: "1px solid #E0E0E0", display: "flex", gap: 8 }}>
         <input
           value={input}
           onChange={e => setInput(e.target.value)}
           onKeyDown={e => e.key === "Enter" && send()}
           placeholder="Ask about the data..."
-          style={{ flex: 1, border: "1px solid #e2e8f0", borderRadius: 12, padding: "9px 13px", fontFamily: "DM Sans,sans-serif", fontSize: 13.5, outline: "none", color: "#1e293b" }}
+          style={{ flex: 1, border: "1px solid #E0E0E0", borderRadius: 12, padding: "9px 13px", fontFamily: "DM Sans,sans-serif", fontSize: 13.5, outline: "none", color: "#4D4D4D" }}
         />
         <button onClick={() => send()} disabled={!input.trim() || loading} style={{
-          background: input.trim() && !loading ? C.blue : "#94a3b8",
+          background: input.trim() && !loading ? C.blue : "#9AA1A6",
           border: "none", borderRadius: 12, padding: "0 16px", color: "#fff",
           cursor: input.trim() && !loading ? "pointer" : "default", fontSize: 20, transition: "background .2s",
         }}>↑</button>
@@ -417,7 +419,7 @@ function OverviewTab({ filters }: { filters: Filters }) {
           {lP ? <Spinner /> : (
             <ResponsiveContainer width="100%" height={210}>
               <LineChart data={praxisAll?.filter(d => d.pass_rate > 0)}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
+                <CartesianGrid strokeDasharray="3 3" stroke="#EFEFEF" />
                 <XAxis dataKey="year" tick={{ fontSize: 12 }} />
                 <YAxis domain={[60, 101]} unit="%" tick={{ fontSize: 12 }} />
                 <Tooltip formatter={(v) => [`${v}%`, "Pass Rate"]} />
@@ -445,7 +447,7 @@ function OverviewTab({ filters }: { filters: Filters }) {
           {lR ? <Spinner /> : (
             <ResponsiveContainer width="100%" height={210}>
               <BarChart data={retYr1}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
+                <CartesianGrid strokeDasharray="3 3" stroke="#EFEFEF" />
                 <XAxis dataKey="graduate_cohort" tick={{ fontSize: 12 }} />
                 <YAxis domain={[0, 100]} unit="%" tick={{ fontSize: 12 }} />
                 <Tooltip formatter={(v) => [`${v}%`, "Retained YR1"]} />
@@ -459,7 +461,7 @@ function OverviewTab({ filters }: { filters: Filters }) {
           {lG ? <Spinner /> : (
             <ResponsiveContainer width="100%" height={210}>
               <LineChart data={gpaData ?? []}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
+                <CartesianGrid strokeDasharray="3 3" stroke="#EFEFEF" />
                 <XAxis dataKey="school_year" tick={{ fontSize: 12 }} />
                 <YAxis domain={[80, 100]} unit="%" tick={{ fontSize: 12 }} />
                 <Tooltip formatter={(v) => [`${v}%`, "Above 3.0"]} />
@@ -500,7 +502,7 @@ function StudentsTab({ filters }: { filters: Filters }) {
         <KPICard label="Total Admitted" value={totalAdmitted ? String(totalAdmitted) : "—"} sub={effectiveYear ? `School year ${effectiveYear}` : ""} color={C.blue} />
         <KPICard label="Female Candidates" value={genderLatest ? `${femalePct}%` : "—"} color={C.teal} />
         <KPICard label="Candidates of Color" value={raceLatest ? `${colorPct}%` : "—"} color={C.purple} />
-        <div style={{ background: "#fff", borderRadius: 16, padding: "10px 16px", boxShadow: "0 2px 12px rgba(0,0,0,0.06)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div style={{ background: "#fff", borderRadius: 0, padding: "10px 16px", border: "1px solid #E0E0E0", display: "flex", alignItems: "center", justifyContent: "center" }}>
           {gpaTarget && gpaLatestRow ? (
             <ComplianceGauge label="GPA < 3.0 Admit Rate" value={gpaLatestRow.pct_below} target={gpaTarget.target} />
           ) : <Spinner />}
@@ -512,7 +514,7 @@ function StudentsTab({ filters }: { filters: Filters }) {
           {lG ? <Spinner /> : (
             <ResponsiveContainer width="100%" height={230}>
               <BarChart data={genderData ?? []}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
+                <CartesianGrid strokeDasharray="3 3" stroke="#EFEFEF" />
                 <XAxis dataKey="school_year" tick={{ fontSize: 12 }} />
                 <YAxis tick={{ fontSize: 12 }} />
                 <Tooltip /><Legend />
@@ -542,12 +544,12 @@ function StudentsTab({ filters }: { filters: Filters }) {
         {lGPA ? <Spinner /> : (
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={gpaData ?? []}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
+              <CartesianGrid strokeDasharray="3 3" stroke="#EFEFEF" />
               <XAxis dataKey="school_year" tick={{ fontSize: 12 }} />
               <YAxis unit="%" tick={{ fontSize: 12 }} />
               <Tooltip formatter={(v) => [`${v}%`]} /><Legend />
               <Bar dataKey="pct_above" name="GPA ≥ 3.0" fill={C.green}  radius={[4, 4, 0, 0]} isAnimationActive={false} />
-              <Bar dataKey="pct_below" name="GPA < 3.0" fill="#fca5a5" radius={[4, 4, 0, 0]} isAnimationActive={false} />
+              <Bar dataKey="pct_below" name="GPA < 3.0" fill="#F2B8B2" radius={[4, 4, 0, 0]} isAnimationActive={false} />
             </BarChart>
           </ResponsiveContainer>
         )}
@@ -575,7 +577,7 @@ function GraduatesTab({ filters }: { filters: Filters }) {
         {lP ? <Spinner /> : (
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={praxisAll?.filter(d => d.pass_rate > 0)}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
+              <CartesianGrid strokeDasharray="3 3" stroke="#EFEFEF" />
               <XAxis dataKey="year" tick={{ fontSize: 12 }} />
               <YAxis domain={[0, 105]} unit="%" tick={{ fontSize: 12 }} />
               <Tooltip formatter={(v) => [`${v}%`, "Pass Rate"]} />
@@ -594,24 +596,24 @@ function GraduatesTab({ filters }: { filters: Filters }) {
           <div style={{ overflowX: "auto" }}>
             <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "DM Sans,sans-serif", fontSize: 13 }}>
               <thead>
-                <tr style={{ borderBottom: "2px solid #e2e8f0" }}>
+                <tr style={{ borderBottom: "2px solid #E0E0E0" }}>
                   {["Program", "Grads", "Pass Rate", "Bar"].map(h => (
-                    <th key={h} style={{ textAlign: h === "Program" ? "left" : "center", padding: "8px 12px", color: "#64748b" }}>{h}</th>
+                    <th key={h} style={{ textAlign: h === "Program" ? "left" : "center", padding: "8px 12px", color: "#6E7781" }}>{h}</th>
                   ))}
                 </tr>
               </thead>
               <tbody>
                 {byProg?.map((p, i) => (
-                  <tr key={i} style={{ borderBottom: "1px solid #f1f5f9", background: i % 2 ? "#fafafa" : "#fff" }}>
-                    <td style={{ padding: "8px 12px", color: "#1e293b" }}>{p.program_name}</td>
-                    <td style={{ padding: "8px 12px", textAlign: "center", color: "#64748b" }}>{p.total_graduates}</td>
+                  <tr key={i} style={{ borderBottom: "1px solid #EFEFEF", background: i % 2 ? "#fafafa" : "#fff" }}>
+                    <td style={{ padding: "8px 12px", color: "#4D4D4D" }}>{p.program_name}</td>
+                    <td style={{ padding: "8px 12px", textAlign: "center", color: "#6E7781" }}>{p.total_graduates}</td>
                     <td style={{ padding: "8px 12px", textAlign: "center" }}>
-                      <span style={{ background: p.pass_rate === 100 ? "#dcfce7" : "#fef3c7", color: p.pass_rate === 100 ? C.green : C.amber, borderRadius: 20, padding: "2px 10px", fontWeight: 700 }}>
+                      <span style={{ background: p.pass_rate === 100 ? "#DCF2E7" : "#FDF0D0", color: p.pass_rate === 100 ? C.green : C.amber, borderRadius: 20, padding: "2px 10px", fontWeight: 700 }}>
                         {p.pass_rate}%
                       </span>
                     </td>
                     <td style={{ padding: "8px 12px", minWidth: 120 }}>
-                      <div style={{ height: 8, borderRadius: 4, background: "#e2e8f0" }}>
+                      <div style={{ height: 8, borderRadius: 4, background: "#E0E0E0" }}>
                         <div style={{ height: "100%", borderRadius: 4, width: `${p.pass_rate}%`, background: p.pass_rate === 100 ? C.green : C.amber }} />
                       </div>
                     </td>
@@ -628,7 +630,7 @@ function GraduatesTab({ filters }: { filters: Filters }) {
           {lWT ? <Spinner /> : (
             <ResponsiveContainer width="100%" height={220}>
               <BarChart data={withTests ?? []}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
+                <CartesianGrid strokeDasharray="3 3" stroke="#EFEFEF" />
                 <XAxis dataKey="program_name" hide />
                 <YAxis tick={{ fontSize: 12 }} />
                 <Tooltip /><Legend />
@@ -643,7 +645,7 @@ function GraduatesTab({ filters }: { filters: Filters }) {
           {lF ? <Spinner /> : (
             <ResponsiveContainer width="100%" height={220}>
               <ComposedChart data={frequency ?? []}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
+                <CartesianGrid strokeDasharray="3 3" stroke="#EFEFEF" />
                 <XAxis dataKey="num_tests_taken" tick={{ fontSize: 12 }} label={{ value: "Attempts", position: "insideBottom", offset: -4, fontSize: 11 }} />
                 <YAxis yAxisId="count" tick={{ fontSize: 12 }} />
                 <YAxis yAxisId="pct" orientation="right" unit="%" domain={[0, 100]} tick={{ fontSize: 12 }} />
@@ -661,28 +663,28 @@ function GraduatesTab({ filters }: { filters: Filters }) {
           <div style={{ overflowX: "auto", maxHeight: 320, overflowY: "auto" }}>
             <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "DM Sans,sans-serif", fontSize: 13 }}>
               <thead>
-                <tr style={{ borderBottom: "2px solid #e2e8f0" }}>
+                <tr style={{ borderBottom: "2px solid #E0E0E0" }}>
                   {["Praxis Test", "Takers", "Avg Attempts", "Pass Rate", "Challenge Index"].map(h => (
-                    <th key={h} style={{ textAlign: h === "Praxis Test" ? "left" : "center", padding: "8px 12px", color: "#64748b", position: "sticky", top: 0, background: "#fff" }}>{h}</th>
+                    <th key={h} style={{ textAlign: h === "Praxis Test" ? "left" : "center", padding: "8px 12px", color: "#6E7781", position: "sticky", top: 0, background: "#fff" }}>{h}</th>
                   ))}
                 </tr>
               </thead>
               <tbody>
                 {difficultySorted.map((r, i) => (
-                  <tr key={i} style={{ borderBottom: "1px solid #f1f5f9", background: i % 2 ? "#fafafa" : "#fff" }}>
-                    <td style={{ padding: "8px 12px", color: "#1e293b" }}>{r.course_title}</td>
-                    <td style={{ padding: "8px 12px", textAlign: "center", color: "#64748b" }}>{r.unique_takers}</td>
-                    <td style={{ padding: "8px 12px", textAlign: "center", color: "#64748b" }}>{r.avg_attempts_per_taker}</td>
+                  <tr key={i} style={{ borderBottom: "1px solid #EFEFEF", background: i % 2 ? "#fafafa" : "#fff" }}>
+                    <td style={{ padding: "8px 12px", color: "#4D4D4D" }}>{r.course_title}</td>
+                    <td style={{ padding: "8px 12px", textAlign: "center", color: "#6E7781" }}>{r.unique_takers}</td>
+                    <td style={{ padding: "8px 12px", textAlign: "center", color: "#6E7781" }}>{r.avg_attempts_per_taker}</td>
                     <td style={{ padding: "8px 12px", textAlign: "center", color: r.pct_takers_passed === 100 ? C.green : C.amber }}>{r.pct_takers_passed}%</td>
                     <td style={{ padding: "8px 12px", textAlign: "center" }}>
-                      <span style={{ background: r.challenge_index > 1 ? "#fef3c7" : "#dcfce7", color: r.challenge_index > 1 ? C.amber : C.green, borderRadius: 20, padding: "2px 10px", fontWeight: 700 }}>
+                      <span style={{ background: r.challenge_index > 1 ? "#FDF0D0" : "#DCF2E7", color: r.challenge_index > 1 ? C.amber : C.green, borderRadius: 20, padding: "2px 10px", fontWeight: 700 }}>
                         {r.challenge_index}
                       </span>
                     </td>
                   </tr>
                 ))}
                 {!difficultySorted.length && (
-                  <tr><td colSpan={5} style={{ padding: 16, textAlign: "center", color: "#94a3b8" }}>No Praxis attempts recorded for this selection.</td></tr>
+                  <tr><td colSpan={5} style={{ padding: 16, textAlign: "center", color: "#9AA1A6" }}>No Praxis attempts recorded for this selection.</td></tr>
                 )}
               </tbody>
             </table>
@@ -744,7 +746,7 @@ function OutcomesTab({ filters }: { filters: Filters }) {
         {lC ? <Spinner /> : (countyData && countyData.length > 0 ? (
           <DelawareCountyMap data={countyData as EmploymentCountyRow[]} />
         ) : (
-          <div style={{ padding: 24, textAlign: "center", color: "#94a3b8", fontFamily: "DM Sans,sans-serif", fontSize: 13 }}>
+          <div style={{ padding: 24, textAlign: "center", color: "#9AA1A6", fontFamily: "DM Sans,sans-serif", fontSize: 13 }}>
             No county placement data for this selection (try "All Years" or "All Programs").
           </div>
         ))}
@@ -754,7 +756,7 @@ function OutcomesTab({ filters }: { filters: Filters }) {
         {lR ? <Spinner /> : (
           <ResponsiveContainer width="100%" height={240}>
             <LineChart data={combined}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
+              <CartesianGrid strokeDasharray="3 3" stroke="#EFEFEF" />
               <XAxis dataKey="cohort" tick={{ fontSize: 12 }} />
               <YAxis domain={[40, 100]} unit="%" tick={{ fontSize: 12 }} />
               <Tooltip formatter={(v) => v ? [`${v}%`] : ["No data"]} />
@@ -827,7 +829,7 @@ function PerceptionTab({ filters }: { filters: Filters }) {
                 year: d.school_year,
                 avg: parseFloat(((d.instrDesg + d.contKnow + d.classMgt + d.instrPrac + d.profResp) / 5).toFixed(2)),
               }))}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
+                <CartesianGrid strokeDasharray="3 3" stroke="#EFEFEF" />
                 <XAxis dataKey="year" tick={{ fontSize: 12 }} />
                 <YAxis domain={[2, 4]} tick={{ fontSize: 12 }} />
                 <Tooltip formatter={(v) => [`${v}`, "Avg Score"]} />
@@ -842,7 +844,7 @@ function PerceptionTab({ filters }: { filters: Filters }) {
         {lG ? <Spinner /> : (
           <ResponsiveContainer width="100%" height={240}>
             <LineChart data={gradData ?? []}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
+              <CartesianGrid strokeDasharray="3 3" stroke="#EFEFEF" />
               <XAxis dataKey="school_year" tick={{ fontSize: 12 }} />
               <YAxis domain={[2, 4.5]} tick={{ fontSize: 12 }} />
               <Tooltip formatter={(v: number) => [v?.toFixed(2)]} /><Legend />
@@ -891,43 +893,43 @@ export default function App() {
 
   return (
     <>
-      <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-      <div style={{ minHeight: "100vh", background: "#f8fafc", fontFamily: "DM Sans,sans-serif" }}>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+      <div style={{ minHeight: "100vh", background: "#FFFFFF", fontFamily: "DM Sans,sans-serif" }}>
 
         {/* Header */}
-        <div style={{ background: "#0f172a", padding: "0 32px" }}>
-          <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", height: 64, flexWrap: "wrap", gap: 8 }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-              <div style={{ width: 36, height: 36, borderRadius: 8, background: C.blue, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18 }}>🎓</div>
-              <div>
-                <div style={{ color: "#fff", fontFamily: "Fraunces,serif", fontWeight: 700, fontSize: 17 }}>University of Delaware</div>
-                <div style={{ color: "#64748b", fontSize: 11, letterSpacing: ".08em", textTransform: "uppercase" }}>Educator Preparation Program · EPP Report</div>
+        <div style={{ background: "#FFFFFF", borderBottom: "1px solid #E0E0E0", padding: "0 32px" }}>
+          <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", height: 72, flexWrap: "wrap", gap: 8 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+              <img src={doeLogo} alt="Delaware Department of Education" style={{ height: 40 }} />
+              <div style={{ borderLeft: "1px solid #E0E0E0", paddingLeft: 14 }}>
+                <div style={{ color: C.blue, fontFamily: "Playfair Display,serif", fontWeight: 700, fontSize: 17 }}>University of Delaware</div>
+                <div style={{ color: "#6E7781", fontSize: 11, letterSpacing: ".08em", textTransform: "uppercase" }}>Educator Preparation Program · EPP Report</div>
               </div>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
               <Select value={programFilter} onChange={setProgramFilter} options={programOptions} label="Program:" />
               <Select value={yearFilter} onChange={setYearFilter} options={yearOptions} label="Year:" />
               <button onClick={() => setInfoOpen(true)} title="Dashboard info" style={{
-                background: "rgba(255,255,255,.08)", border: "none", borderRadius: 8, cursor: "pointer",
-                width: 30, height: 30, fontSize: 15, color: "#fff",
+                background: "#F4F4F4", border: "1px solid #E0E0E0", borderRadius: 8, cursor: "pointer",
+                width: 30, height: 30, fontSize: 15, color: C.blue,
               }}>ℹ️</button>
               <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
                 <div style={{ width: 7, height: 7, borderRadius: "50%", background: C.green }} />
-                <span style={{ color: "#64748b", fontSize: 12 }}>Static Data</span>
+                <span style={{ color: "#6E7781", fontSize: 12 }}>Static Data</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Nav */}
-        <div style={{ background: "#fff", borderBottom: "1px solid #e2e8f0", padding: "0 32px" }}>
+        <div style={{ background: "#fff", borderBottom: "1px solid #E0E0E0", padding: "0 32px" }}>
           <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex" }}>
             {TABS.map(tab => (
               <button key={tab.id} onClick={() => setActiveTab(tab.id)} style={{
                 padding: "16px 20px", border: "none", background: "transparent", cursor: "pointer",
                 fontFamily: "DM Sans,sans-serif", fontSize: 14,
                 fontWeight: activeTab === tab.id ? 700 : 500,
-                color: activeTab === tab.id ? C.blue : "#64748b",
+                color: activeTab === tab.id ? C.blue : "#6E7781",
                 borderBottom: activeTab === tab.id ? `3px solid ${C.blue}` : "3px solid transparent",
                 transition: "all .2s", whiteSpace: "nowrap",
               }}>{tab.label}</button>
@@ -945,7 +947,7 @@ export default function App() {
           <button onClick={() => setChatOpen(true)} style={{
             position: "fixed", right: 24, bottom: 24, width: 56, height: 56,
             borderRadius: "50%", background: C.blue, border: "none", cursor: "pointer",
-            boxShadow: "0 8px 24px rgba(37,99,235,.4)", fontSize: 22,
+            boxShadow: "0 8px 24px rgba(20,68,104,.4)", fontSize: 22,
             display: "flex", alignItems: "center", justifyContent: "center", zIndex: 999,
           }}>🤖</button>
         )}

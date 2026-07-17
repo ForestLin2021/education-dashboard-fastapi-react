@@ -34,31 +34,31 @@ export default function ComplianceGauge({ label, value, target, lowerIsBetter = 
   const domainMax = Math.max(target * 2, value * 1.2, 1);
   const pct = Math.min(value / domainMax, 1);
   const isCompliant = lowerIsBetter ? value <= target : value >= target;
-  const color = isCompliant ? "#16a34a" : "#dc2626";
+  const color = isCompliant ? "#0F9D58" : "#DB4437";
   const targetAngle = Math.min((target / domainMax) * 180, 180);
 
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <svg width={WIDTH} height={HEIGHT + 4} viewBox={`0 0 ${WIDTH} ${HEIGHT + 4}`}>
-        <path d={describeArc(CX, CY, R, 0, 180)} fill="none" stroke="#e2e8f0" strokeWidth={14} strokeLinecap="round" />
+        <path d={describeArc(CX, CY, R, 0, 180)} fill="none" stroke="#E0E0E0" strokeWidth={14} strokeLinecap="round" />
         <path d={describeArc(CX, CY, R, 0, pct * 180)} fill="none" stroke={color} strokeWidth={14} strokeLinecap="round" />
         {/* target tick */}
         {(() => {
           const inner = polarToCartesian(CX, CY, R - 11, targetAngle);
           const outer = polarToCartesian(CX, CY, R + 11, targetAngle);
-          return <line x1={inner.x} y1={inner.y} x2={outer.x} y2={outer.y} stroke="#334155" strokeWidth={2} />;
+          return <line x1={inner.x} y1={inner.y} x2={outer.x} y2={outer.y} stroke="#4D4D4D" strokeWidth={2} />;
         })()}
-        <text x={CX} y={CY - 6} textAnchor="middle" fontSize={26} fontWeight={700} fontFamily="Fraunces,serif" fill="#0f172a">
+        <text x={CX} y={CY - 6} textAnchor="middle" fontSize={26} fontWeight={700} fontFamily="Playfair Display,serif" fill="#333333">
           {value}{unit}
         </text>
       </svg>
-      <span style={{ fontSize: 11, color: "#64748b", fontFamily: "DM Sans,sans-serif", marginTop: -4 }}>{label}</span>
+      <span style={{ fontSize: 11, color: "#6E7781", fontFamily: "DM Sans,sans-serif", marginTop: -4 }}>{label}</span>
       <div style={{
         marginTop: 6, fontSize: 11, fontWeight: 700, padding: "2px 10px", borderRadius: 20,
-        background: isCompliant ? "#dcfce7" : "#fee2e2", color, fontFamily: "DM Sans,sans-serif",
+        background: isCompliant ? "#DCF2E7" : "#F9DAD6", color, fontFamily: "DM Sans,sans-serif",
       }}>
         {isCompliant ? "✅ Compliant" : "❌ Not Compliant"}
-        <span style={{ fontWeight: 400, color: "#64748b", marginLeft: 6 }}>target {lowerIsBetter ? "≤" : "≥"}{target}{unit}</span>
+        <span style={{ fontWeight: 400, color: "#6E7781", marginLeft: 6 }}>target {lowerIsBetter ? "≤" : "≥"}{target}{unit}</span>
       </div>
     </div>
   );

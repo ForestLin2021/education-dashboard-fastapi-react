@@ -21,12 +21,12 @@ export default function DelawareCountyMap({ data }: DelawareCountyMapProps) {
   const maxCount = Math.max(1, ...data.map(d => d.count));
 
   const colorFor = (count: number) => {
-    if (!count) return "#eef2f7";
+    if (!count) return "#F0F0F0";
     const t = 0.25 + 0.75 * (count / maxCount);
-    // interpolate between light and dark blue
-    const r = Math.round(219 - t * (219 - 30));
-    const g = Math.round(234 - t * (234 - 64));
-    const b = Math.round(254 - t * (254 - 175));
+    // interpolate between a light tint and the theme's tableAccent (#144468)
+    const r = Math.round(219 - t * (219 - 20));
+    const g = Math.round(230 - t * (230 - 68));
+    const b = Math.round(237 - t * (237 - 104));
     return `rgb(${r},${g},${b})`;
   };
 
@@ -50,7 +50,7 @@ export default function DelawareCountyMap({ data }: DelawareCountyMapProps) {
                   onMouseLeave={() => setHovered(null)}
                   style={{
                     default: { outline: "none" },
-                    hover: { outline: "none", fill: "#2563eb", cursor: "pointer" },
+                    hover: { outline: "none", fill: "#144468", cursor: "pointer" },
                     pressed: { outline: "none" },
                   }}
                 />
@@ -62,7 +62,7 @@ export default function DelawareCountyMap({ data }: DelawareCountyMapProps) {
       {hovered && (
         <div style={{
           position: "fixed", left: hovered.x + 12, top: hovered.y + 12, zIndex: 10,
-          background: "#0f172a", color: "#fff", padding: "6px 10px", borderRadius: 8,
+          background: "#333333", color: "#fff", padding: "6px 10px", borderRadius: 8,
           fontFamily: "DM Sans,sans-serif", fontSize: 12.5, pointerEvents: "none",
           boxShadow: "0 4px 16px rgba(0,0,0,.2)",
         }}>
